@@ -8,6 +8,7 @@ const port = 3000;
 const con = db.createConnection({
     host: secrets.dbhost,
     port: secrets.dbport,
+    database: secrets.db,
     user: secrets.dbuser,
     password: secrets.dbpass
 })
@@ -16,9 +17,9 @@ con.connect((err) => {
     if(err) console.log(err);
 });
 
-con.query('use test', (err, result) => {
-    if(err) console.log(err);
-});
+// con.query('use test', (err, result) => {
+//     if(err) console.log(err);
+// });
 
 app.get('/', (req, res) => {
     con.query('select * from test_table', (err, rows) => {
