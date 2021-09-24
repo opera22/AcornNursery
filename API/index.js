@@ -25,7 +25,11 @@ app.get('/', (req, res) => {
     con.query('select * from test_table', (err, rows) => {
         if(err) console.log(err);
         console.log(rows);
-        res.send(`Here's your first response... \n id: ${rows[0].id} \n name: ${rows[0].name}`);
+        res.json({
+            id: rows[0].id,
+            name: rows[0].name
+        });
+        // res.send(`Here's your first response... \n id: ${rows[0].id} \n name: ${rows[0].name}`);
     });
 });
 
