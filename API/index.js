@@ -1,25 +1,35 @@
 const express = require('express');
 const db = require('mysql');
+require('dotenv').config();
 const secrets = require('./secrets.json');
 
 const app = express();
 const port = 3000;
 
+// console.log(process.env.DB_HOST,
+//     process.env.DB_PORT,
+//     process.env.DB,
+//     process.env.DB_USER,
+//     process.env.DB_PASS);
+
 const con = db.createConnection({
-    host: secrets.dbhost,
-    port: secrets.dbport,
-    database: secrets.db,
-    user: secrets.dbuser,
-    password: secrets.dbpass
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    database: process.env.DB,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS
 })
 
 con.connect((err) => {
-    if(err) console.log(err);
+    err ? console.log(err) : console.log("Connected to MySQL instance");
 });
 
 // con.query('use test', (err, result) => {
 //     if(err) console.log(err);
 // });
+
+const authRoute = require('./routes/auth');
+app.use('/api/user', authRoute);
 
 app.get('/', (req, res) => {
     con.query('select * from test_table', (err, rows) => {
