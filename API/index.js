@@ -1,10 +1,16 @@
 const express = require('express');
 const db = require('mysql');
 require('dotenv').config();
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 const secrets = require('./secrets.json');
 
 const app = express();
 const port = 3000;
+
+// Parses data from forms submitted by client
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
 
 // console.log(process.env.DB_HOST,
 //     process.env.DB_PORT,
