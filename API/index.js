@@ -4,6 +4,7 @@ require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const secrets = require('./secrets.json');
+const path = require('path');
 
 const app = express();
 const port = 3000;
@@ -11,6 +12,7 @@ const port = 3000;
 // Parses data from forms submitted by client
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
+app.use( express.static( path.join( __dirname, '..', 'client')));
 
 // console.log(process.env.DB_HOST,
 //     process.env.DB_PORT,
@@ -47,6 +49,10 @@ app.get('/', (req, res) => {
         });
         // res.send(`Here's your first response... \n id: ${rows[0].id} \n name: ${rows[0].name}`);
     });
+});
+
+app.get('/welcome', (req, res) => {
+    res.sendFile( path.join( __dirname, '..', 'client', 'index.html' ));
 });
 
 
