@@ -39,7 +39,7 @@ con.connect((err) => {
 const authRoute = require('./routes/auth');
 app.use('/api/user', authRoute);
 
-app.get('/', (req, res) => {
+app.get('/getdata', (req, res) => {
     con.query('select * from test_table', (err, rows) => {
         if(err) console.log(err);
         console.log(rows);
