@@ -1,2 +1,4 @@
-API/node_modules
+node_modules
 secrets.json
+.env
+package-lock.json
