@@ -1,3 +1,9 @@
+h1 {
+  justify-content: center;
+  text-align: center;
+  background-color: tomato;
+}
+
 .topnav {
     background-color: #006EB6;
     display: flex;
@@ -49,9 +55,10 @@
   
 .container {
     display: flex;
-    height: 95vh;
+    height: 95.2vh;
     width: 100%;
     flex-direction: row;
+    margin: 0;
 }
 
 .left-side {
