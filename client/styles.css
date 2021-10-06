@@ -133,12 +133,9 @@ h2 {
 	text-align: center;
 }
 
-
-
 span {
 	font-size: 12px;
 }
-
 
 button {
 	border-radius: 20px;
@@ -342,7 +339,7 @@ input {
 .selectdiv:after {
 	content: '\f063';
 	font: normal normal normal 17px/1 FontAwesome;
-	color: #0ebeff;
+	color: #006EB6;
 	right: 21px;
 	top: 4px;
 	height: 12px;
