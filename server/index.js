@@ -3,7 +3,7 @@ const db = require('mysql');
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const secrets = require('./secrets.json');
+//const secrets = require('./secrets.json');
 const path = require('path');
 
 const app = express();
