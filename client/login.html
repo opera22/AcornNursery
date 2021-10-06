@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="topnav">
+            <div class="logo"><img src="acorn.png" alt="Acorn Logo" width="40" height="40">
+                <p class="push">Acorn Nursery</p>
+            </div>
+            <a class="active" href="#home">Home</a>
+            <a href="#sponsor">Sponsor Project</a>
+            <a href="#find">Find Project</a>
+            <a href="#LogIn">Log In</a>
+        </div>
+
+
+        <!-- sign in portion -->
+        <div class="main_container">
+            <div class="container" id="container">
+                <div class="form-container sign-up-container">
+                    <form action="#">
+                        <h1 style="color: black;">Create Account</h1>
+                        <input type="text" placeholder="First Name" />
+                        <input type="text" placeholder="Last Name" />
+                        <input type="email" id="email" placeholder="Email" />
+                        <input type="password" id="password" placeholder="Password" />
+                        <input type="password" id="password2" placeholder="Confirm Password" />
+                        <button type="button" onclick="window.location.href='UserSignUp.html'">Sign Up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <!-- <form action="#"> -->
+                    <form>
+                        <h1 style="color: black;">Sign in</h1>
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <a class="space" href="#">Forgot your password?</a>
+                        <button type="button" onclick="window.location.href='UserProfileInfo.html'" class="button">Sign
+                            In</button>
+                    </form>
+                </div>
+                <!-- sign up portion -->
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <button class="ghost" id="signIn">Sign In</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <!--          <h1>Hello, Friend!</h1>-->
+                            <h1>Welcome!</h1>
+                            <p>Enter your personal details and start developing</p>
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="login.js"></script>
+</body>
+
+</html>

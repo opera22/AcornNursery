@@ -1,5 +1,0 @@
-DB_HOST = "0.0.0.0"
-DB_PORT = "3001"
-DB = "test"
-DB_USER = "admin"
-DB_PASS = "alpine"
