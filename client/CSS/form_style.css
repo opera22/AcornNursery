@@ -1,14 +1,16 @@
-h1 {
+/* h1 {
   justify-content: center;
   text-align: center;
   background-color: tomato;
-}
+} */
 
 .topnav {
     background-color: #006EB6;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
   }
   
   .topnav a {
@@ -55,7 +57,7 @@ h1 {
   
 .container {
     display: flex;
-    height: 95.2vh;
+    height: 95.1vh;
     width: 100%;
     flex-direction: row;
     margin: 0;
