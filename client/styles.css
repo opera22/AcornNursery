@@ -10,6 +10,7 @@ body {
 	flex-direction: column;
 	background-color: black;
 	color: white;
+	font-family: Avenir Next, sans-serif;
 }
 
 .topnav {
@@ -91,37 +92,11 @@ body {
     border: 2px solid black;
 }
 
-/**/
 /* Login Page CSS */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
 	box-sizing: border-box;
-}
-
-body {
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	background-color: black;
-	color: white;
-	font-family: Avenir Next, sans-serif;
-}
-
- header {
-    background: #000000;
-    overflow: hidden;
-    border-radius: 10px;
-    text-align: center;
-    font-family: Raleway, sans-serif;
-    margin: auto;
-    color: white;
-}
-
-header::after{
-    content: '';
-    display:table;
-    clear:both;
 }
 
 h1 {
@@ -321,8 +296,6 @@ input {
 	width: 40px;
 }
 
-
-
 /* dropdown code*/
 .selectdiv {
 	position: relative;
@@ -457,14 +430,6 @@ select::-ms-expand {
 	margin-top: 20px;
 	width: 100%;
 }
-
-
-
-
-
-
-
-
 
 /* SOCIAL PANEL CSS */
 .social-panel-container {
