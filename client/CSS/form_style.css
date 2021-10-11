@@ -1,8 +1,7 @@
-/* h1 {
-  justify-content: center;
-  text-align: center;
-  background-color: tomato;
-} */
+h2 {
+  font-family: Avenir Next, sans-serif;
+  color: white;
+}
 
 .topnav {
     background-color: #006EB6;
@@ -58,19 +57,24 @@
 .container {
     display: flex;
     height: 95.1vh;
-    width: 100%;
+    width: auto;
     flex-direction: row;
     margin: 0;
+    justify-content: center;
 }
 
 .left-side {
     width: 50%;
-    background-color: silver;
+    background-color: white;
+    display: block;
+    text-align: center;
 }
 
 .right-side {
     width: 50%;
     background-color: blanchedalmond;
+    display: block;
+    text-align: center;
 }
 /* The switch - the box around the slider */
 .switch {
@@ -133,4 +137,28 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.left_form {
+  justify-content: center;
+  background-color: #006EB6;
+  border: black solid 2px;
+  border-radius: 5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.right_form {
+  justify-content: center;
+  background-color: #006EB6;
+  border: black solid 2px;
+  border-radius: 5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.controls {
+  padding: 5px;
+  margin: 5px;
+  font-family: Avenir Next, sans-serif;
 }

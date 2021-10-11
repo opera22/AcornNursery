@@ -18,38 +18,51 @@
             <a href="/client/login.html">Sign Out</a>
         </div>
 
-        <div class="container">
-            <div class="left-side" id="left">
-                <input type="text" name="sponsor_input" class="sponsor_fields" size="50" placeholder="Project Title">
-                <label for="catagory">Choose a Catagory:</label>
-                <select name="catagory" id="catagory">
-                    <option value="web">Web</option>
-                    <option value="mobile">Mobile</option>
-                    <option value="os">OS</option>
-                </select>
-                <input type="text" name="sponsor_input" class="sponsor_fields" size="50"
-                    placeholder="Project Description">
-            </div>
-            <div class="right-side" id="right">
-                <div class="controls">
-                    <input type="text" name="sponsor_input" class="sponsor_fields" size="50"
-                        placeholder="Feature Title">
-                    <input type="text" name="sponsor_input" class="sponsor_fields" size="50"
-                        placeholder="Feature Description">
-                    <a href="#" id="add_more_features"><i class="fa fa-plus"></i>Add Feature</a>
-                    <a href="#" id="remove_features"><i class="fa fa-plus"></i>Remove</a>
-                    <div class="pm_button">
-                        <label>Are You The PM? (No/Yes)</label>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
+        <div>
+            <div class="container">
+                <div class="left-side" id="left">
+                    <form class="left_form">
+                        <h2>Create Project</h2>
+                        <input type="text" name="sponsor_input" class="sponsor_fields" size="50"
+                            placeholder="Project Title">
+                        <textarea name="sponsor_input" placeholder="Project Description" class="sponsor_fields"
+                            cols="50" rows="10"></textarea>
+                        
+                        <h2>Features</h2>
+                        <div class="controls">
+                            <div>
+                                <a href="#" id="add_more_features"><i class="fa fa-plus"></i>Add Feature</a>
+                                <a href="#" id="remove_features"><i class="fa fa-plus"></i>Remove</a>
+                            </div>
+                        </div>
+                        <input type="text" name="sponsor_input" class="sponsor_fields" size="50"
+                            placeholder="Feature Title">
+                        <input type="text" name="sponsor_input" class="sponsor_fields" size="50"
+                            placeholder="Feature Description">
+                        <div id="features">
+                        </div>
+                    </form>
+                    <div class="controls">
+                        <div class="pm_button">
+                            <label for="catagory">Choose a Catagory:</label>
+                            <select name="catagory" id="catagory">
+                                <option value="web">Web</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="os">OS</option>
+                            </select>
+                            <label>Are You The PM? (No/Yes)</label>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="/client/JS/script.js"></script>
+    <script src="/client/JS/script.js"></script>
 
 </body>
 

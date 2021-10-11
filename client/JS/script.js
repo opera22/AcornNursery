@@ -1,4 +1,4 @@
-var survey_fields = document.getElementById('right');
+var survey_fields = document.getElementById('features');
 var add_more_features = document.getElementById('add_more_features');
 var remove_features = document.getElementById('remove_features');
 
@@ -13,8 +13,8 @@ add_more_features.onclick = function(){
 
 	var newFeature = document.createElement('input');
 	newFeature.setAttribute('type','text');
-	newFeature.setAttribute('name','sponser_input');
-	newFeature.setAttribute('class','sponser_fields');
+	newFeature.setAttribute('name','survey_options[]');
+	newFeature.setAttribute('class','feature_items');
 	newFeature.setAttribute('size',50);
 	newFeature.setAttribute('placeholder','Feature Description');
 	survey_fields.appendChild(newFeature);
@@ -22,7 +22,7 @@ add_more_features.onclick = function(){
 
 remove_features.onclick = function(){
 	var input_tags = survey_fields.getElementsByTagName('input');
-	if(input_tags.length > 2) {
+	if(input_tags.length > 0) {
 		survey_fields.removeChild(input_tags[(input_tags.length) - 1]);
 		survey_fields.removeChild(input_tags[(input_tags.length) - 1]);
 	}
