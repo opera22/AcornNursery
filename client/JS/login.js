@@ -16,17 +16,20 @@ const password2 = document.getElementById('password2');
 
 signUpButton.addEventListener('click', () => {
 	container.classList.add("right-panel-active");
+	console.log("Panel hit");
 });
 
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
+	console.log("Panel hit");
 });
 
 // Form Validate
 form.addEventListener('submit', e => {
 	e.preventDefault();
-	
 	checkInputs();
+
+	console.log(e.target.f_name.value);
 });
 
 formSecond.addEventListener('submit', e => {
@@ -107,9 +110,9 @@ function setSuccessFor(input) {
 	formControl.className = 'form-control success';
 }
 	
-// function isEmail(email) {
-// 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-// }
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
 
 // // SOCIAL PANEL JS
 // const floating_btn = document.querySelector('.floating-btn');
