@@ -1,6 +1,7 @@
 h2 {
   font-family: Avenir Next, sans-serif;
   color: white;
+  text-align: center;
 }
 
 .topnav {
@@ -51,6 +52,10 @@ h2 {
   }
   
   body {
+    background-image: linear-gradient(rgba(105, 102, 102, 0.5), rgba(189, 107, 107, 0.5)), url("/client/Images/background_image.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     margin: 0;
   }
   
@@ -69,13 +74,13 @@ h2 {
     display: block;
     text-align: center;
 }
-
+/* 
 .right-side {
     width: 50%;
     background-color: blanchedalmond;
     display: block;
     text-align: center;
-}
+} */
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -141,11 +146,14 @@ input:checked + .slider:before {
 
 .left_form {
   justify-content: center;
-  background-color: #006EB6;
+  background-color:  #6B9D41;
   border: black solid 2px;
   border-radius: 5px;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 30px;
 }
 
 .right_form {
@@ -163,7 +171,7 @@ input:checked + .slider:before {
   font-family: Avenir Next, sans-serif;
 }
 
-.lbl {
+/* .lbl {
   text-align: right;
   width: 100px;
   white-space: nowrap;
@@ -175,4 +183,42 @@ input:checked + .slider:before {
 
 .frm {
   display: inline-block;
+} */
+
+input[type="text"]{
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: white;
+  width: 274px;
+  color: black;
+}
+
+textarea {
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: white;
+  width: 274px;
+  color: black;
+}
+
+.controls {
+  margin: 15px auto;
+  text-align: center;
+}
+
+.controls a i.fa-minus {
+  margin-right: 5px;
+}
+
+.center_text {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
 }

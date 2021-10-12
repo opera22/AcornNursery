@@ -20,27 +20,42 @@
 
         <div>
             <div class="container">
-                <div class="left-side" id="left">
+                <div>
                     <form class="left_form">
                         <h2>Create Project</h2>
-                        <div>
-                            <table>
-                                <tr>
-                                    <td><input type="text" name="sponsor_input" class="sponsor_fields" size="50"
-                                            placeholder="Project Title"></td>
-                                </tr>
-                                <tr>
-                                    <td><textarea name="sponsor_input" placeholder="Project Description"
-                                            class="sponsor_fields" cols="50" rows="10"></textarea></td>
-                                </tr>
-                            </table>
+                        <div class="controls">
+                            <div class="pm_button">
+                                <label>Are You The PM? (No/Yes)</label>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <label for="catagory">Choose a Catagory:</label>
+                                <select name="catagory" id="catagory">
+                                    <option value="web">Web</option>
+                                    <option value="mobile">Mobile</option>
+                                    <option value="os">OS</option>
+                                </select>
+                            </div>
                         </div>
+
+                        <div class="center_text">
+                        <table>
+                            <tr>
+                                <td><input type="text" name="sponsor_input" class="sponsor_fields" size="50"
+                                        placeholder="Project Title"></td>
+                            </tr>
+                            <tr>
+                                <td><textarea name="sponsor_input" placeholder="Project Description"
+                                        class="sponsor_fields" cols="50" rows="10"></textarea></td>
+                            </tr>
+                        </table>
+                        </div>
+
                         <h2>Features</h2>
                         <div class="controls">
-                            <div>
-                                <a href="#" id="add_more_features"><i class="fa fa-plus"></i>Add Feature</a>
-                                <a href="#" id="remove_features"><i class="fa fa-plus"></i>Remove</a>
-                            </div>
+                            <a href="#" id="add_more_features"><i class="fa fa-plus"></i>+ Add Feature</a>
+                            <a href="#" id="remove_features"><i class="fa fa-plus"></i>- Remove</a>
                         </div>
                         <input type="text" name="sponsor_input" class="sponsor_fields" size="50"
                             placeholder="Feature Title">
@@ -49,21 +64,6 @@
                         <div id="features">
                         </div>
                     </form>
-                    <div class="controls">
-                        <div class="pm_button">
-                            <label for="catagory">Choose a Catagory:</label>
-                            <select name="catagory" id="catagory">
-                                <option value="web">Web</option>
-                                <option value="mobile">Mobile</option>
-                                <option value="os">OS</option>
-                            </select>
-                            <label>Are You The PM? (No/Yes)</label>
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
