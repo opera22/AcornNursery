@@ -3,7 +3,7 @@ const db = require('mysql');
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const secrets = require('./secrets.json');
+//const secrets = require('./secrets.json');
 const path = require('path');
 
 const app = express();
@@ -13,12 +13,13 @@ const port = 3000;
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use( express.static( path.join( __dirname, '..', 'client')));
+// app.use(express.static(__dirname + '../client'));
 
-// console.log(process.env.DB_HOST,
-//     process.env.DB_PORT,
-//     process.env.DB,
-//     process.env.DB_USER,
-//     process.env.DB_PASS);
+console.log(process.env.DB_HOST,
+    process.env.DB_PORT,
+    process.env.DB,
+    process.env.DB_USER,
+    process.env.DB_PASS);
 
 const con = db.createConnection({
     host: process.env.DB_HOST,
