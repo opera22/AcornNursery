@@ -162,3 +162,17 @@ input:checked + .slider:before {
   margin: 5px;
   font-family: Avenir Next, sans-serif;
 }
+
+.lbl {
+  text-align: right;
+  width: 100px;
+  white-space: nowrap;
+}
+
+.fld {
+  width: 100%;
+}
+
+.frm {
+  display: inline-block;
+}
