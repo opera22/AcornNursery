@@ -27,9 +27,15 @@ signInButton.addEventListener('click', () => {
 // Form Validate
 form.addEventListener('submit', e => {
 	e.preventDefault();
-	checkInputs();
+	if (checkInputs()) {
+		console.log(e.target.f_name.value);
+		console.log(e.target.l_name.value);
+		console.log(e.target.email.value);
+		console.log(e.target.password.value);
+	};
 
-	console.log(e.target.f_name.value);
+
+	
 });
 
 formSecond.addEventListener('submit', e => {
@@ -62,40 +68,50 @@ function checkInputs() {
 	const emailValue = email.value.trim();
 	const passwordValue = password.value.trim();
 	const password2Value = password2.value.trim();
+	let allGood = true;
 
 	if(firstnameValue === '') {
 		setErrorFor(f_name, 'First Name cannot be blank');
+		allGood = false;
 	} else {
 		setSuccessFor(f_name);
 	}
 
 	if(lastnameValue === '') {
 		setErrorFor(l_name, 'Last Name cannot be blank');
+		allGood = false;
 	} else {
 		setSuccessFor(l_name);
 	}
 	
 	if(emailValue === '') {
 		setErrorFor(email, 'Email cannot be blank');
+		allGood = false;
 	} else if (!isEmail(emailValue)) {
 		setErrorFor(email, 'Not a valid email');
+		allGood = false;
 	} else {
 		setSuccessFor(email);
 	}
 	
 	if(passwordValue === '') {
 		setErrorFor(password, 'Password cannot be blank');
+		allGood = false;
 	} else {
 		setSuccessFor(password);
 	}
 	
 	if(password2Value === '') {
 		setErrorFor(password2, 'Password cannot be blank');
+		allGood = false;
 	} else if(passwordValue !== password2Value) {
 		setErrorFor(password2, 'Password does not match');
+		allGood = false;
 	} else{
 		setSuccessFor(password2);
 	}
+
+	return allGood;
 }
 
 function setErrorFor(input, message) {
