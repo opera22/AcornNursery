@@ -52,7 +52,7 @@ h2 {
   }
   
   body {
-    background-image: linear-gradient(rgba(105, 102, 102, 0.5), rgba(189, 107, 107, 0.5)), url("/client/Images/background_image.png");
+    background-image: linear-gradient(rgba(105, 102, 102, 0.5), rgba(189, 107, 107, 0.5)), url("../Images/background_image.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -61,7 +61,7 @@ h2 {
   
 .container {
     display: flex;
-    height: 95.1vh;
+    height: 94vh;
     width: auto;
     flex-direction: row;
     margin: 0;

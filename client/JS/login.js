@@ -33,32 +33,37 @@ form.addEventListener('submit', e => {
 		console.log(e.target.email.value);
 		console.log(e.target.password.value);
 	};
-
-
 	
 });
 
 formSecond.addEventListener('submit', e => {
 	e.preventDefault();
-	
-	SignInValidate();
+	if(SignInValidate()){
+		console.log(e.target.sign_email.value)
+		console.log(e.target.sign_password.value)
+	}
 });
 
 function SignInValidate(){
 	const signInEmail = sign_email.value.trim();
 	const signInPassword = sign_password.value.trim();
+	let allGood = true;
 
 	if(signInEmail === '') {
 		setErrorFor(sign_email, 'Email cannot be blank');
+		allGood = false;
 	} else {
 		setSuccessFor(sign_email);
 	}
 
 	if(signInPassword === '') {
 		setErrorFor(sign_password, 'Password cannot be blank');
+		allGood = false;
 	} else {
 		setSuccessFor(sign_password);
 	}
+
+	return allGood;
 }
 
 function checkInputs() {
