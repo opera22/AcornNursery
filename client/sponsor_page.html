@@ -15,29 +15,31 @@
             <a href="home_logged_in.html">Home</a>
             <a class="active" href="sponsor_page.html">Sponsor Project</a>
             <a href="#find">Find Project</a>
+            <a href="about_us.html">About Us</a>
             <a href="login.html">Sign Out</a>
         </div>
 
 
         <div class="container">
             <div>
-                <form class="left_form">
+                <form class="left_form" >
                     <h2>Create Project</h2>
                     <div class="controls">
                         <div class="pm_button">
-                            <table><tr>
-                                <td><label>Are You The PM? (No/Yes)</label>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider round"></span>
-                                </label></td>
-                               
-                                <td><label for="catagory">Choose a Catagory:</label>
-                                <select name="catagory" id="catagory">
-                                    <option value="web">Web</option>
-                                    <option value="mobile">Mobile</option>
-                                    <option value="os">OS</option>
-                                </select></td>
+                            <table>
+                                <tr>
+                                    <td><label>Are You The PM? (No/Yes)</label>
+                                        <label id="PM" class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label></td>
+
+                                    <td><label for="catagory">Choose a Catagory:</label>
+                                        <select name="catagory" id="catagory">
+                                            <option value="web">Web</option>
+                                            <option value="mobile">Mobile</option>
+                                            <option value="os">OS</option>
+                                        </select></td>
                                 </tr>
                             </table>
                         </div>
@@ -46,11 +48,11 @@
                     <div class="center_text">
                         <table>
                             <tr>
-                                <td><input type="text" name="sponsor_input" class="sponsor_fields" size="50"
-                                        placeholder="Project Title"></td>
+                                <td><input id="project_title" type="text" name="sponsor_input" class="sponsor_fields"
+                                        size="50" placeholder="Project Title"></td>
                             </tr>
                             <tr>
-                                <td><textarea name="sponsor_input" placeholder="Project Description"
+                                <td><textarea id="project_des" name="sponsor_input" placeholder="Project Description"
                                         class="sponsor_fields" cols="50" rows="10"></textarea></td>
                             </tr>
                         </table>
@@ -63,13 +65,13 @@
                     </div>
                     <input type="text" id="feature_title" name="sponsor_input" class="sponsor_fields" size="50"
                         placeholder="Feature Title">
-                    <textarea id="feature_description" name="sponsor_input" class="sponsor_fields" size="50" placeholder="Feature Description"
-                        cols="50" rows="5"></textarea>
+                    <textarea id="feature_description" name="sponsor_input" class="sponsor_fields" size="50"
+                        placeholder="Feature Description" cols="50" rows="5"></textarea>
                     <div id="features"></div>
+                    <div>
+                        <button class="button_submit" id="Submit" type="submit">Submit</button>
+                    </div>
                 </form>
-                <div>
-                    <button class="button_submit" id="Submit" type="submit">Submit</button>
-                </div>
             </div>
         </div>
     </div>
