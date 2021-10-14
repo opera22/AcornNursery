@@ -18,28 +18,32 @@
             <a href="login.html">Sign Out</a>
         </div>
 
-        <div>
-            <div class="container">
-                <div>
-                    <form class="left_form">
-                        <h2>Create Project</h2>
-                        <div class="controls">
-                            <div class="pm_button">
-                                <label>Are You The PM? (No/Yes)</label>
+
+        <div class="container">
+            <div>
+                <form class="left_form">
+                    <h2>Create Project</h2>
+                    <div class="controls">
+                        <div class="pm_button">
+                            <table><tr>
+                                <td><label>Are You The PM? (No/Yes)</label>
                                 <label class="switch">
                                     <input type="checkbox">
                                     <span class="slider round"></span>
-                                </label>
-                                <label for="catagory">Choose a Catagory:</label>
+                                </label></td>
+                               
+                                <td><label for="catagory">Choose a Catagory:</label>
                                 <select name="catagory" id="catagory">
                                     <option value="web">Web</option>
                                     <option value="mobile">Mobile</option>
                                     <option value="os">OS</option>
-                                </select>
-                            </div>
+                                </select></td>
+                                </tr>
+                            </table>
                         </div>
+                    </div>
 
-                        <div class="center_text">
+                    <div class="center_text">
                         <table>
                             <tr>
                                 <td><input type="text" name="sponsor_input" class="sponsor_fields" size="50"
@@ -50,20 +54,21 @@
                                         class="sponsor_fields" cols="50" rows="10"></textarea></td>
                             </tr>
                         </table>
-                        </div>
+                    </div>
 
-                        <h2>Features</h2>
-                        <div class="controls">
-                            <a href="#" id="add_more_features"><i class="fa fa-plus"></i>+ Add Feature</a>
-                            <a href="#" id="remove_features"><i class="fa fa-plus"></i>- Remove</a>
-                        </div>
-                        <input type="text" name="sponsor_input" class="sponsor_fields" size="50"
-                            placeholder="Feature Title">
-                        <input type="text" name="sponsor_input" class="sponsor_fields" size="50"
-                            placeholder="Feature Description">
-                        <div id="features">
-                        </div>
-                    </form>
+                    <h2>Features</h2>
+                    <div class="controls_button">
+                        <a href="#" id="add_more_features"><i class="fa fa-plus"></i>[+ Add Feature]</a>
+                        <a href="#" id="remove_features"><i class="fa fa-plus"></i>[- Remove Field]</a>
+                    </div>
+                    <input type="text" id="feature_title" name="sponsor_input" class="sponsor_fields" size="50"
+                        placeholder="Feature Title">
+                    <textarea id="feature_description" name="sponsor_input" class="sponsor_fields" size="50" placeholder="Feature Description"
+                        cols="50" rows="5"></textarea>
+                    <div id="features"></div>
+                </form>
+                <div>
+                    <button class="button_submit" id="Submit" type="submit">Submit</button>
                 </div>
             </div>
         </div>
