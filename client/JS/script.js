@@ -50,9 +50,18 @@ form.addEventListener("submit", async (e) => {
 	console.log(project_catagory.value)
 	console.log(project_manager.value)
 
-    // e.preventDefault();
-    //     const res = await axios.post("/", {
-    //         title_of_project: e.target.title_of_project.value,
-    //     });
-    //     console.log(res.data);
+
+	// var object = {};
+	// form.forEach((value, key) => {
+	// 	// Reflect.has in favor of: object.hasOwnProperty(key)
+	// 	if (!Reflect.has(object, key)) {
+	// 		object[key] = value;
+	// 		return;
+	// 	}
+	// 	if (!Array.isArray(object[key])) {
+	// 		object[key] = [object[key]];
+	// 	}
+	// 	object[key].push(value);
+	// });
+	// var json = JSON.stringify(object);
 });
