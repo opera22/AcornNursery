@@ -3,7 +3,7 @@ const add_more_features = document.getElementById('add_more_features');
 const remove_features = document.getElementById('remove_features');
 var count = 0;
 
-const form = document.getElementById("Submit")
+const form = document.getElementById("form")
 const project_title = document.getElementById('project_title');
 const project_description = document.getElementById('project_des');
 const project_catagory = document.getElementById('catagory');
@@ -45,10 +45,11 @@ remove_features.onclick = function () {
 }
 
 form.addEventListener("submit", async (e) => {
-	console.log(project_title.value)
-	console.log(project_description.value)
-	console.log(project_catagory.value)
-	console.log(project_manager.value)
+	
+	for (let i = 0; i < survey_fields.childNodes.length; i++){
+		var textField = survey_fields.childNodes[i];
+		console.log(textField);
+	}
 
 
 	// var object = {};
