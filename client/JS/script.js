@@ -9,6 +9,8 @@ const project_description = document.getElementById('project_des');
 const project_catagory = document.getElementById('catagory');
 const project_manager = document.getElementById('PM');
 
+var feature_items = [];
+
 add_more_features.onclick = function () {
 	var newTitle = document.createElement('input');
 	count++;
@@ -30,6 +32,8 @@ add_more_features.onclick = function () {
 	newFeature.rows = 5;
 	newFeature.placeholder = "Feature Description";
 	survey_fields.appendChild(newFeature);
+
+	feature_items.push([newTitle.id, newFeature.id]);
 }
 
 remove_features.onclick = function () {
@@ -45,24 +49,27 @@ remove_features.onclick = function () {
 }
 
 form.addEventListener("submit", async (e) => {
-	
-	for (let i = 0; i < survey_fields.childNodes.length; i++){
-		var textField = survey_fields.childNodes[i];
-		console.log(textField);
+	e.preventDefault();
+	var features = new Object();
+	var jsonObject = new Object();
+
+	var title = document.getElementById("project_title").value;
+	var description = document.getElementById("project_des").value;
+	var feature_title = document.getElementById("feature_title").value
+	var feature_description = document.getElementById("feature_description").value
+	jsonObject["title"] = title;
+	jsonObject["description"] = description;
+	features[feature_title] = feature_description
+
+	for (let i = 0; i < feature_items.length; i++){
+		// let i = 0; i < survey_fields.childNodes.length; i++)
+		// var textField = survey_fields.childNodes[i];
+		
+		var dynamic_title = document.getElementById(feature_items[i][0]).value
+		var dynamic_description = document.getElementById(feature_items[i][1]).value
+		
+		features[dynamic_title] = dynamic_description;
 	}
-
-
-	// var object = {};
-	// form.forEach((value, key) => {
-	// 	// Reflect.has in favor of: object.hasOwnProperty(key)
-	// 	if (!Reflect.has(object, key)) {
-	// 		object[key] = value;
-	// 		return;
-	// 	}
-	// 	if (!Array.isArray(object[key])) {
-	// 		object[key] = [object[key]];
-	// 	}
-	// 	object[key].push(value);
-	// });
-	// var json = JSON.stringify(object);
+	jsonObject["features"] = features;
+	console.log(jsonObject);
 });
