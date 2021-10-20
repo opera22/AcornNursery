@@ -80,9 +80,11 @@ body {
 .contents {
     background-color: palegoldenrod;
     border: black solid 2px;
-    width: 1010px;
+    width: auto;
     text-align: left;
     padding: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .style {

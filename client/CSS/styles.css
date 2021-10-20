@@ -4,7 +4,7 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
     margin: 0 auto;
-
+	height: 100vh;
     justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -20,7 +20,6 @@ body {
     flex-wrap: wrap;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-	padding-right: 20.4px;
 }
 
 .topnav a {
@@ -62,8 +61,9 @@ body {
 
 .main_container {
     display: flex;
+	flex-direction: column;
     width: auto;
-    height: 94vh;
+    height: 94.5vh;
     justify-content: center;
 }
 
@@ -171,13 +171,16 @@ input {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
-	margin: auto;
+	/* margin: auto; */
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 57px;
 }
 
 .form-container {
 	position: absolute;
-	top: 0;
-	height: 100%;
+	/* top: 0; */
+	height: 480px;
 	transition: all 0.6s ease-in-out;
 }
 
@@ -593,4 +596,11 @@ select::-ms-expand {
 	.floating-btn {
 		right: 10px;
 	}
+}
+
+.margin {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: large;
 }

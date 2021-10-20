@@ -40,6 +40,7 @@ remove_features.onclick = function () {
 	var input_tags = survey_fields.getElementsByTagName('input');
 	if (input_tags.length > 0) {
 		survey_fields.removeChild(input_tags[(input_tags.length) - 1]);
+		feature_items.pop()
 	}
 
 	var textarea_tags = survey_fields.getElementsByTagName('textarea');
