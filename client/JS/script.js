@@ -54,18 +54,20 @@ form.addEventListener("submit", async (e) => {
 	var features = new Object();
 	var jsonObject = new Object();
 
+	var pm_logic = document.getElementById("Pm").checked;
+	var catagory = document.getElementById("catagory").value;
 	var title = document.getElementById("project_title").value;
 	var description = document.getElementById("project_des").value;
 	var feature_title = document.getElementById("feature_title").value
 	var feature_description = document.getElementById("feature_description").value
-	jsonObject["title"] = title;
-	jsonObject["description"] = description;
+	
+	jsonObject["Title"] = title;
+	jsonObject["Description"] = description;
+	jsonObject["PM"] = pm_logic;
+	jsonObject["Catagory"] = catagory;
 	features[feature_title] = feature_description
 
-	for (let i = 0; i < feature_items.length; i++){
-		// let i = 0; i < survey_fields.childNodes.length; i++)
-		// var textField = survey_fields.childNodes[i];
-		
+	for (let i = 0; i < feature_items.length; i++){		
 		var dynamic_title = document.getElementById(feature_items[i][0]).value
 		var dynamic_description = document.getElementById(feature_items[i][1]).value
 		

@@ -63,6 +63,7 @@ body {
 .main_container {
   display: flex;
   width: auto;
+  flex-direction: row;
   height: 94vh;
   justify-content: center;
 }
@@ -99,3 +100,28 @@ body {
 a:link {
   text-decoration: none;
 }
+
+.table-striped {
+  margin-top: 40px;
+  width: 80%;
+  height: auto;
+  background-color: #fff;
+  color: black;
+}
+
+tr, td, table {
+  height: 50px !important; 
+  table-layout: fixed;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+table {
+  border: black solid 3px;
+  border-radius: 5px;
+}
+
+table:nth-of-type(odd) {
+  background-color:#ccc;
+  }
