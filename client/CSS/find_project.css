@@ -105,20 +105,17 @@ th {
     background-color: #006EB6;
 }
 
-
-.background {
-    background-color: bisque;
-}
-
 .table-striped {
     margin-top: 40px;
     width: 80%;
     height: auto;
     background-color: #fff;
     color: black;
+    border: black solid 3px;
 }
 
 tr, td, table {
     height: 50px !important; 
     table-layout: fixed;
+    text-align: center;
 }

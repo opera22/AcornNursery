@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,800;1,800&display=swap');
+
 body {
   background-image: linear-gradient(rgba(105, 102, 102, 0.5), rgba(189, 107, 107, 0.5)), url("../Images/background_image.png");
   background-repeat: no-repeat;
@@ -63,9 +65,10 @@ body {
 .main_container {
   display: flex;
   width: auto;
-  flex-direction: row;
+  /* flex-direction: column; */
   height: 94vh;
-  justify-content: center;
+  /* justify-content: center; */
+  /* text-align: center; */
 }
 
 .child_container {
@@ -101,27 +104,39 @@ a:link {
   text-decoration: none;
 }
 
+th {
+  cursor: pointer;
+  color: #fff;
+  background-color: #006EB6;
+}
+
 .table-striped {
   margin-top: 40px;
   width: 80%;
   height: auto;
   background-color: #fff;
   color: black;
+  border: black solid 3px;
+  /* justify-content: center;
+  text-align: center; */
 }
 
 tr, td, table {
   height: 50px !important; 
   table-layout: fixed;
-  background-color: white;
-  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  /* text-align: center; */
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
   text-align: center;
+  justify-content: center;
 }
 
-table {
-  border: black solid 3px;
-  border-radius: 5px;
+h2 { 
+  font-weight: bold;
 }
-
-table:nth-of-type(odd) {
-  background-color:#ccc;
-  }

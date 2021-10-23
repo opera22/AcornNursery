@@ -2,6 +2,9 @@
 <html>
 
 <head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/logged_in_home.css">
     <title>Home</title>
 </head>
@@ -21,20 +24,23 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
-        <div class="main_container">
-            <table class="table table-striped">
-                <tr class="bg-info">
-                    <th data-colname="title" data-order="desc">Title &#9650</th>
-                    <th data-colname="description" data-order="desc">Description</th>
-                    <th data-colname="date" data-order="desc">Date &#9650</th>
-                    <th data-colname="catagory" data-order="desc">Catagory &#9650</th>
-                </tr>
-                <tbody id="myTable">
-                </tbody>
-            </table>
+        <div class="main_container flex-column">
+            <div class="center">
+                <h2>Your Current Projects</h2>
+                <table class="table table-striped">
+                    <tr class="bg-info">
+                        <th data-colname="title" data-order="desc">Title &#9650</th>
+                        <th data-colname="description" data-order="desc">Description</th>
+                        <th data-colname="date" data-order="desc">Date &#9650</th>
+                        <th data-colname="catagory" data-order="desc">Catagory &#9650</th>
+                    </tr>
+                    <tbody id="myTable">
+                    </tbody>
+                </table>
+            </div>
         </div>
-        
-        
+
+
         <script>
             var myArray = [{
                     'title': 'Android',
@@ -84,42 +90,18 @@
                     'date': '10/31/1995',
                     'catagory': 'OS'
                 },
-                {
-                    'title': 'Side loader',
-                    'description': 'story',
-                    'date': '10/31/1995',
-                    'catagory': 'OS'
-                },
-                {
-                    'title': 'Side loader',
-                    'description': 'story',
-                    'date': '10/31/1995',
-                    'catagory': 'OS'
-                },
-                {
-                    'title': 'Side loader',
-                    'description': 'story',
-                    'date': '10/31/1995',
-                    'catagory': 'OS'
-                },
-                {
-                    'title': 'Side loader',
-                    'description': 'story',
-                    'date': '10/31/1995',
-                    'catagory': 'OS'
-                },
             ]
-        
+
             buildTable(myArray)
-        
+
             $('th').on('click', function () {
                 var column = $(this).data('colname')
                 var order = $(this).data('order')
                 var text = $(this).html()
                 text = text.substring(0, text.length - 1);
-        
-        
-        
+
+
+
                 if (order == 'desc') {
                     myArray = myArray.sort((a, b) => a[column] > b[column] ? 1 : -1)
                     $(this).data("order", "asc");
@@ -129,12 +111,12 @@
                     $(this).data("order", "desc");
                     text += '&#9650'
                 }
-        
+
                 $(this).html(text)
                 buildTable(myArray)
             })
-        
-        
+
+
             function buildTable(data) {
                 var table = document.getElementById('myTable')
                 table.innerHTML = ''
@@ -143,7 +125,7 @@
                     var coldescription = `description-${i}`
                     var coldate = `date-${i}`
                     var colcatagory = `catagory-${i}`
-        
+
                     var row = `<tr>
                                 <td>${data[i].title}</td>
                                 <td>${data[i].description}</td>
