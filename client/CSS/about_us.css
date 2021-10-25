@@ -79,12 +79,13 @@ body {
 
 .contents {
     background-color: palegoldenrod;
-    border: black solid 2px;
+    box-shadow: 0px 6px 23px -2px #000000;
     width: auto;
     text-align: left;
     padding: 20px;
     margin-left: 20%;
     margin-right: 20%;
+    border-radius: 3px;
 }
 
 .style {

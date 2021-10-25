@@ -43,11 +43,14 @@ form.addEventListener("submit", async (e) => {
     }
 });
 
-formSecond.addEventListener("submit", (e) => {
+formSecond.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (SignInValidate()) {
-        console.log(e.target.sign_email.value);
-        console.log(e.target.sign_password.value);
+        const res = await axios.post("/api/user/register", {
+        username: e.target.sign_email.value,
+        password: e.target.sign_password.value,
+        });
+        console.log(res.data);
     }
 });
 

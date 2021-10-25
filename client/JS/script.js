@@ -74,5 +74,8 @@ form.addEventListener("submit", async (e) => {
 		features[dynamic_title] = dynamic_description;
 	}
 	jsonObject["features"] = features;
-	console.log(jsonObject);
+	// console.log(jsonObject);
+
+	const res = await axios.post("/api/user/register", jsonObject);
+	console.log(res.data);
 });

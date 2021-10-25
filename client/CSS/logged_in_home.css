@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  /* background-color: black; */
   color: white;
   font-family: Avenir Next, sans-serif;
 }
@@ -65,13 +65,10 @@ body {
 .main_container {
   display: flex;
   width: auto;
-  /* flex-direction: column; */
   height: 94vh;
-  /* justify-content: center; */
-  /* text-align: center; */
 }
 
-.child_container {
+/* .child_container {
   display: flex;
   width: auto;
   height: 100%;
@@ -81,7 +78,7 @@ body {
   font-weight: bolder;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
-}
+} */
 
 .get_started {
   color: white;
@@ -111,14 +108,11 @@ th {
 }
 
 .table-striped {
-  margin-top: 40px;
   width: 80%;
   height: auto;
   background-color: #fff;
   color: black;
-  border: black solid 3px;
-  /* justify-content: center;
-  text-align: center; */
+  box-shadow: 0px 6px 23px -2px #000000;
 }
 
 tr, td, table {
@@ -126,7 +120,11 @@ tr, td, table {
   table-layout: fixed;
   margin-left: auto;
   margin-right: auto;
-  /* text-align: center; */
+  border-collapse: collapse;
+}
+
+table {
+  border-radius: 3px;
 }
 
 .center {
@@ -139,4 +137,8 @@ tr, td, table {
 
 h2 { 
   font-weight: bold;
+}
+
+.table-test tr:nth-child(odd){
+  background-color: #dee2e6;
 }
