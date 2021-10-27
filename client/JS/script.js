@@ -8,7 +8,9 @@ const project_title = document.getElementById('project_title');
 const project_description = document.getElementById('project_des');
 const project_catagory = document.getElementById('catagory');
 const project_manager = document.getElementById('PM');
-const project_title_feature = document.getElementById('feature_title');
+
+const title_feature = document.getElementById('feature_title');
+const description_feature = document.getElementById('feature_description');
 
 var feature_items = [];
 
@@ -87,7 +89,8 @@ function checkInputs() {
 	// trim to remove the whitespaces
 	const title = project_title.value.trim();
 	const description = project_description.value.trim();
-	const feature_title_var = project_title_feature.value.trim();
+	const feature_title = title_feature.value.trim();
+	const feature_description = description_feature.value.trim();
 	let allGood = true;
 
 	if (title === "") {
@@ -98,11 +101,25 @@ function checkInputs() {
 	}
 
 	if (description === "") {
-		setErrorFor(project_description, "Project Description cannot be blank");
+		setError(project_description, "Project Description cannot be blank");
 		allGood = false;
 	} else {
-		setSuccessFor(project_description);
+		setSuccess(project_description);
 	}
+
+	// if (feature_title_var === "") {
+	// 	setError(title_feature, "Feature Title cannot be blank");
+	// 	allGood = false;
+	// } else {
+	// 	setSuccessFor(title_feature);
+	// }
+
+	// if (feature_description_var === "") {
+	// 	setError(description_feature, "Feature Description cannot be blank");
+	// 	allGood = false;
+	// } else {
+	// 	setSuccessFor(description_feature);
+	// }
 
 	return allGood;
 }
@@ -114,7 +131,19 @@ function setErrorFor(input, message) {
 	small.innerText = message;
 }
 
+function setError(textarea, message) {
+	const formControl = textarea.parentElement;
+	const small = formControl.querySelector("small");
+	formControl.className = "form-control error";
+	small.innerText = message;
+}
+
 function setSuccessFor(input) {
 	const formControl = input.parentElement;
+	formControl.className = "form-control success";
+}
+
+function setSuccess(textarea) {
+	const formControl = textarea.parentElement;
 	formControl.className = "form-control success";
 }

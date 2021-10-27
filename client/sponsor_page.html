@@ -47,13 +47,13 @@
                     <div class="center_text">
                         <table>
                             <tr>
-                                <td><input id="project_title" type="text" name="sponsor_input" class="sponsor_fields form-control"
+                                <td class="form-control"><input id="project_title" type="text" name="sponsor_input" class="sponsor_fields"
                                         size="50" placeholder="Project Title">
                                         <small>Error message</small></td>
                             </tr>
                             <tr>
-                                <td><textarea id="project_des" name="sponsor_input" placeholder="Project Description"
-                                        class="sponsor_fields form-control" cols="50" rows="10"></textarea>
+                                <td class="form-control"><textarea id="project_des" name="sponsor_input" placeholder="Project Description"
+                                        class="sponsor_fields" cols="50" rows="10"></textarea>
                                         <small>Error message</small></td>
                             </tr>
                         </table>
@@ -64,10 +64,12 @@
                         <a href="#" id="add_more_features"><i class="fa fa-plus"></i>[+ Add Feature]</a>
                         <a href="#" id="remove_features"><i class="fa fa-plus"></i>[- Remove Field]</a>
                     </div>
-                    <input type="text" id="feature_title" name="sponsor_input" class="sponsor_fields" size="50"
+                    <input type="text" id="feature_title" name="sponsor_input" class="sponsor_fields form-control" size="50"
                         placeholder="Feature Title">
-                    <textarea id="feature_description" name="sponsor_input" class="sponsor_fields" size="50"
+                        
+                    <textarea id="feature_description" name="sponsor_input" class="sponsor_fields form-control" size="50"
                         placeholder="Feature Description" cols="50" rows="5"></textarea>
+                        
                     <div id="features" name="features[feature]"></div>
                     <div>
                         <button class="button_submit" id="Submit" type="submit">Submit</button>
