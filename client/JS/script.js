@@ -8,6 +8,7 @@ const project_title = document.getElementById('project_title');
 const project_description = document.getElementById('project_des');
 const project_catagory = document.getElementById('catagory');
 const project_manager = document.getElementById('PM');
+const project_title_feature = document.getElementById('feature_title');
 
 var feature_items = [];
 
@@ -51,31 +52,69 @@ remove_features.onclick = function () {
 
 form.addEventListener("submit", async (e) => {
 	e.preventDefault();
-	var features = new Object();
-	var jsonObject = new Object();
+	if (checkInputs()) {
+		var features = new Object();
+		var jsonObject = new Object();
 
-	var pm_logic = document.getElementById("Pm").checked;
-	var catagory = document.getElementById("catagory").value;
-	var title = document.getElementById("project_title").value;
-	var description = document.getElementById("project_des").value;
-	var feature_title = document.getElementById("feature_title").value
-	var feature_description = document.getElementById("feature_description").value
-	
-	jsonObject["Title"] = title;
-	jsonObject["Description"] = description;
-	jsonObject["PM"] = pm_logic;
-	jsonObject["Catagory"] = catagory;
-	features[feature_title] = feature_description
+		var pm_logic = document.getElementById("Pm").checked;
+		var catagory = document.getElementById("catagory").value;
+		var title = document.getElementById("project_title").value;
+		var description = document.getElementById("project_des").value;
+		var feature_title = document.getElementById("feature_title").value
+		var feature_description = document.getElementById("feature_description").value
 
-	for (let i = 0; i < feature_items.length; i++){		
-		var dynamic_title = document.getElementById(feature_items[i][0]).value
-		var dynamic_description = document.getElementById(feature_items[i][1]).value
-		
-		features[dynamic_title] = dynamic_description;
+		jsonObject["Title"] = title;
+		jsonObject["Description"] = description;
+		jsonObject["PM"] = pm_logic;
+		jsonObject["Catagory"] = catagory;
+		features[feature_title] = feature_description
+
+		for (let i = 0; i < feature_items.length; i++) {
+			var dynamic_title = document.getElementById(feature_items[i][0]).value
+			var dynamic_description = document.getElementById(feature_items[i][1]).value
+
+			features[dynamic_title] = dynamic_description;
+		}
+		jsonObject["features"] = features;
+		// console.log(jsonObject);
+
+		const res = await axios.post("/api/user/register", jsonObject);
+		console.log(res.data);
 	}
-	jsonObject["features"] = features;
-	// console.log(jsonObject);
-
-	const res = await axios.post("/api/user/register", jsonObject);
-	console.log(res.data);
 });
+
+function checkInputs() {
+	// trim to remove the whitespaces
+	const title = project_title.value.trim();
+	const description = project_description.value.trim();
+	const feature_title_var = project_title_feature.value.trim();
+	let allGood = true;
+
+	if (title === "") {
+		setErrorFor(project_title, "Project Title cannot be blank");
+		allGood = false;
+	} else {
+		setSuccessFor(project_title);
+	}
+
+	if (description === "") {
+		setErrorFor(project_description, "Project Description cannot be blank");
+		allGood = false;
+	} else {
+		setSuccessFor(project_description);
+	}
+
+	return allGood;
+}
+
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector("small");
+	formControl.className = "form-control error";
+	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = "form-control success";
+}

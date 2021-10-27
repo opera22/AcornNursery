@@ -2,7 +2,7 @@
 
 h2 {
   font-family: Avenir Next, sans-serif;
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -150,7 +150,7 @@ input:checked + .slider:before {
 
 .dynamic_form {
   justify-content: center;
-  background-color:  #6B9D41;
+  background-color: rgb(247, 237, 212);
   box-shadow: 0px 6px 23px -2px #000000;
   border-radius: 5px;
   padding-top: 30px;
@@ -200,7 +200,6 @@ textarea {
 
 .controls_button a i.fa-minus {
   margin-right: 5px;
-  
 }
 
 .controls_button {
@@ -238,4 +237,69 @@ tr {
   padding-right: 20px;
   border: 1px solid black;
   border-radius: 5px;
+}
+
+/* .form-control {
+	margin-bottom: 8px;
+	padding-bottom: 10px;
+	position: relative;
+} */
+
+/* .form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+} */
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	/* display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%; */
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+/* .form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+} */
+
+/* .form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+} */
+
+/* .form-control.error i.fa-exclamation-circle {
+	color: orange;
+	visibility: visible;
+} */
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	/* position: absolute; */
+	/* bottom: 0; */
+	/* left: 0; */
+	visibility: hidden;
+  font-weight: bold;
+  font-size: 14px;
 }
