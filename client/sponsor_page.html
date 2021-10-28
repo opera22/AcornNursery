@@ -47,36 +47,44 @@
                     <div class="center_text">
                         <table>
                             <tr>
-                                <td class="form-control"><input id="project_title" type="text" name="sponsor_input" class="sponsor_fields"
-                                        size="50" placeholder="Project Title">
-                                        <small>Error message</small></td>
+                                <td class="form-control"><input id="project_title" type="text" name="sponsor_input"
+                                        class="sponsor_fields" size="50" placeholder="Project Title">
+                                    <small>Error message</small></td>
                             </tr>
                             <tr>
-                                <td class="form-control"><textarea id="project_des" name="sponsor_input" placeholder="Project Description"
-                                        class="sponsor_fields" cols="50" rows="10"></textarea>
-                                        <small>Error message</small></td>
+                                <td class="form-control"><textarea id="project_des" name="sponsor_input"
+                                        placeholder="Project Description" class="sponsor_fields" cols="50"
+                                        rows="10"></textarea>
+                                    <small>Error message</small></td>
                             </tr>
                         </table>
                     </div>
-
-                    <h2>Features</h2>
-                    <div class="controls_button">
-                        <a href="#" id="add_more_features"><i class="fa fa-plus"></i>[+ Add Feature]</a>
-                        <a href="#" id="remove_features"><i class="fa fa-plus"></i>[- Remove Field]</a>
+                    <div>
+                        <h2>Features</h2>
+                        
+                        <div class="form-control">
+                            <input type="text" id="feature_titles" name="sponsor_input"
+                                class="sponsor_fields form-control" size="0" placeholder="Feature Title">
+                            <small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <textarea id="feature_description" name="sponsor_input" placeholder="Feature Description"
+                                class="sponsor_fields" cols="50" rows="10"></textarea>
+                            <small>Error message</small>
+                        </div>
                     </div>
-                    <input type="text" id="feature_title" name="sponsor_input" class="sponsor_fields form-control" size="50"
-                        placeholder="Feature Title">
-                        
-                    <textarea id="feature_description" name="sponsor_input" class="sponsor_fields form-control" size="50"
-                        placeholder="Feature Description" cols="50" rows="5"></textarea>
-                        
+                    <div class="controls_button">
+                        <a href="#" id="add_more_features">[+ Add Feature]</a>
+                        <a href="#" id="remove_features">[- Remove Field]</a>
+                    </div>
                     <div id="features" name="features[feature]"></div>
                     <div>
                         <button class="button_submit" id="Submit" type="submit">Submit</button>
                     </div>
-                </form>
             </div>
+            </form>
         </div>
+    </div>
     </div>
 
     <script src="JS/script.js"></script>
