@@ -21,7 +21,6 @@ add_more_features.onclick = function () {
 	newTitle.type = "text";
 	newTitle.id = "uniID" + count;
 	newTitle.name = "sponser_input";
-	newTitle.class = "sponser_fields";
 	newTitle.size = 50;
 	newTitle.placeholder = "Feature Title";
 	survey_fields.appendChild(newTitle);
@@ -29,7 +28,7 @@ add_more_features.onclick = function () {
 	var newFeature = document.createElement('textarea');
 	newFeature.id = "uniID2" + count;
 	newFeature.name = "survey_options[]";
-	newFeature.class = "feature_items";
+	newFeature.className = "spacing_support";
 	newFeature.size = 50;
 	newFeature.cols = 50;
 	newFeature.rows = 5;
@@ -126,19 +125,7 @@ function setErrorFor(input, message) {
 	small.innerText = message;
 }
 
-// function setError(textarea, message) {
-// 	const formControl = textarea.parentElement;
-// 	const small = formControl.querySelector("small");
-// 	formControl.className = "form-control error";
-// 	small.innerText = message;
-// }
-
 function setSuccessFor(input) {
 	const formControl = input.parentElement;
 	formControl.className = "form-control success";
 }
-
-// function setSuccess(textarea) {
-// 	const formControl = textarea.parentElement;
-// 	formControl.className = "form-control success";
-// }
