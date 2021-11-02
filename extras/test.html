@@ -3,24 +3,22 @@
 <head>
   <title>Dynamic Fields - Day #29</title>
   <link rel="stylesheet" type="text/css" href="/client/CSS/style.css">
-  <!-- include font awesome -->
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 
-  <h1>Dynamic Fields Javascript</h1>
-  <div class="wrapper">
-    <div id="survey_options">
-      <input type="text" name="survey_options[]" class="survey_options" size="50" placeholder="Name">
-      <input type="text" name="survey_options[]" class="survey_options" size="50" placeholder="Email">
-      <input type="text" name="survey_options[]" class="survey_options" size="50" placeholder="Another Field">
-    </div>
-    <div class="controls">
-      <a href="#" id="add_more_fields"><i class="fa fa-plus"></i>Add More</a>
-      <a href="#" id="remove_fields"><i class="fa fa-plus"></i>Remove Field</a>
-    </div>
-  </div>
-<script src="/client/JS/script_og.js"></script>
+  <h1 id="get_started">Dynamic Fields Javascript</h1>
+  <button id="view_details">Toggle</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function() {
+  $('#view_details').on('click', function () {
+    $('#get_started').toggle();
+  });
+});
+
+</script>
 </body>
 </html>

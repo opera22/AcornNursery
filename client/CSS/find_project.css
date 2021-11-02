@@ -124,4 +124,8 @@ tr, td, table {
 
 .table-test tr:nth-child(odd){
     background-color: #dee2e6;
-  }
+}
+
+.toggle_width {
+    width: 90px;
+}

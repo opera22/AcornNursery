@@ -2,8 +2,6 @@
 <html>
 
 <head>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="CSS/find_project.css">
     <title>Home</title>
 </head>
@@ -32,6 +30,7 @@
             <th data-colname="description" data-order="desc">Description</th>
             <th data-colname="date" data-order="desc">Date &#9650</th>
             <th data-colname="catagory" data-order="desc">Catagory &#9650</th>
+            <th></th>
         </tr>
         <tbody id="myTable">
         </tbody>
@@ -153,6 +152,7 @@
                         <td>${data[i].description}</td>
                         <td>${data[i].date}</td>
                         <td>${data[i].catagory}</td>
+                        <td><button class="toggle_width">See details</button></td>
                    </tr>`
             table.innerHTML += row
         }
