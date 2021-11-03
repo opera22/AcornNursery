@@ -7,6 +7,7 @@ const sign_password = document.getElementById("sign_password");
 //
 const form = document.getElementById("form");
 const formSecond = document.getElementById("SecondForm");
+const user_name = document.getElementById("username");
 const f_name = document.getElementById("f_name");
 const l_name = document.getElementById("l_name");
 const email = document.getElementById("email");
@@ -78,12 +79,20 @@ function SignInValidate() {
 
 function checkInputs() {
     // trim to remove the whitespaces
+    const username = user_name.value.trim();
     const firstnameValue = f_name.value.trim();
     const lastnameValue = l_name.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
     let allGood = true;
+
+    if (username === "") {
+        setErrorFor(user_name, "Username cannot be blank");
+        allGood = false;
+    } else {
+        setSuccessFor(user_name);
+    }
 
     if (firstnameValue === "") {
         setErrorFor(f_name, "First Name cannot be blank");
