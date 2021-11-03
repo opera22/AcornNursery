@@ -152,9 +152,34 @@
                         <td>${data[i].description}</td>
                         <td>${data[i].date}</td>
                         <td>${data[i].catagory}</td>
-                        <td><button class="toggle_width">See details</button></td>
+                        <td><button id="toggle_width${i}">See details</button></td>
                    </tr>`
+            // var details = `<tr>
+            //                 <td id="${i}">${data[i].description}</td>
+            //               </tr>`
+
             table.innerHTML += row
         }
     }
+    //         table.innerHTML += details
+
+    //         $('#toggle_width0').on('click', function () {
+    //             $('#0').toggle();
+    //         });
+
+    //         $('#toggle_width1').on('click', function () {
+    //             $('#1').toggle();
+    //         });
+    //     }
+    // }
+
+    // $(document).ready(function () {
+    //     $('#toggle_width0').on('click', function () {
+    //         $('#0').toggle();
+    //     });
+
+    //     $('#toggle_width1').on('click', function () {
+    //         $('#1').toggle();
+    //     });
+    // });
 </script>

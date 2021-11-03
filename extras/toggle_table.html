@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <hr>
+    <input type="checkbox" name="EmpName"> Employee Name
+    <input type="checkbox" name="Country"> Country
+    <input type="checkbox" name="email"> Email
+    <input type="checkbox" name="Salary"> Salary
+    </hr>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+        $("input:checkbox").attr("checked", false).click(function () {
+            var shcolum = "." + $(this).attr("name");
+            $(shcolum).toggle();
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th class="ok">Employee Name</th>
+            <th class="ok">Country</th>
+            <th class="email">Email</th>
+            <th class="Salary">Salary</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td class="EmpName">data</td>
+                <td class="EmpName">data</td>
+                <td class="EmpName">data</td>
+                <td class="EmpName">data</td>
+            </tr>
+            <tr>
+                <td class="Country">data2</td>
+                <td class="Country">data2</td>
+                <td class="Country">data2</td>
+                <td class="Country">data2</td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
