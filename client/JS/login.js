@@ -47,7 +47,7 @@ form.addEventListener("submit", async (e) => {
 formSecond.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (SignInValidate()) {
-        const res = await axios.post("/api/user/register", {
+        const res = await axios.post("/api/user/login", {
         username: e.target.sign_email.value,
         password: e.target.sign_password.value,
         });

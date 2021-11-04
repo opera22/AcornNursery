@@ -11,8 +11,8 @@ router.get('/getall', (req, res) => {
         if(err) console.log(err);
         console.log(rows);
         res.json({
-            id: rows[0].id,
-            name: rows[0].name
+            title: rows[0].id,
+            description: rows[0].name
         });
         // res.send(`Here's your first response... \n id: ${rows[0].id} \n name: ${rows[0].name}`);
     });
