@@ -22,7 +22,7 @@ const projectRoute = require('./routes/project');
 app.use('/api/project', projectRoute);
 
 app.get('/', (req, res) => {
-    res.sendFile( path.join( __dirname, '..', 'client', 'index.html' ));
+    res.sendFile( path.join( __dirname, '..', 'client', 'login.html' ));
 });
 
 

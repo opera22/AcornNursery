@@ -9,6 +9,13 @@ var myArray = [
     {'name':'Erik', 'age':'24', 'birthdate':'10/31/1995'},
 ]
 
+const getProjects = async () => {
+    const res = await axios.get("/api/projects/getall");
+    console.log(res.data.results);
+};
+getProjects();
+
+myArray = res.data.results;
 
 buildTable(myArray)
 

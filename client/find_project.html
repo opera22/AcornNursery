@@ -37,7 +37,7 @@
     </table>
 </div>
 
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     var myArray = [{
             'title': 'Android',
@@ -113,6 +113,14 @@
         },
     ]
 
+const getProjects = async (e) => {
+    const res = await axios.get("/api/project/getall");
+    return res.data.results;
+};
+const projects = getProjects();
+
+myArray = projects;
+
     buildTable(myArray)
 
     $('th').on('click', function () {
@@ -161,4 +169,29 @@
             table.innerHTML += row
         }
     }
+
 </script>
+
+    //         table.innerHTML += details
+
+    //         $('#toggle_width0').on('click', function () {
+    //             $('#0').toggle();
+    //         });
+
+    //         $('#toggle_width1').on('click', function () {
+    //             $('#1').toggle();
+    //         });
+    //     }
+    // }
+
+    // $(document).ready(function () {
+    //     $('#toggle_width0').on('click', function () {
+    //         $('#0').toggle();
+    //     });
+
+    //     $('#toggle_width1').on('click', function () {
+    //         $('#1').toggle();
+    //     });
+    // });
+</script>
+
