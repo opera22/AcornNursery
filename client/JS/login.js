@@ -35,6 +35,7 @@ form.addEventListener("submit", async (e) => {
         // In the axios methods, the first parameter is the endpoint/url, and the second parameter is the body. The body
         // is where you store the information you want to send. For a GET request, you probably don't need a body, just an endpoint/URL.
         const res = await axios.post("/api/user/register", {
+            username: e.target.username.value,
             f_name: e.target.f_name.value,
             l_name: e.target.l_name.value,
             email: e.target.email.value,

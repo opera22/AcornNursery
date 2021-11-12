@@ -19,7 +19,10 @@ function format(d) {
 
 $(document).ready(function () {
     var table = $('#example').DataTable({
-        'ajax': 'https://gyrocode.github.io/files/jquery-datatables/objects.json',
+        'ajax': {'url': 'http://localhost:3000/api/project/getall',
+                 'type': 'GET',
+                 'dataSrc': ''
+                },
         'columns': [{
                 'className': 'details-control',
                 'orderable': false,
@@ -27,16 +30,16 @@ $(document).ready(function () {
                 'defaultContent': ''
             },
             {
-                'data': 'name'
+                data: 'title'
             },
             {
-                'data': 'position'
+                data: 'description'
             },
             {
-                'data': 'office'
+                data : 'date'
             },
             {
-                'data': 'salary'
+                data: 'category'
             }
         ],
         'order': [

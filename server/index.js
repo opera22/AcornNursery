@@ -5,14 +5,18 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 //const secrets = require('./secrets.json');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
+
+
 
 // Parses data from forms submitted by client
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use( express.static( path.join( __dirname, '..', 'client')));
+app.use(cors())
 // app.use(express.static(__dirname + '../client'));
 
 

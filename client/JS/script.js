@@ -79,7 +79,7 @@ form.addEventListener("submit", async (e) => {
 		jsonObject["features"] = features;
 		// console.log(jsonObject);
 
-		const res = await axios.post("/api/user/register", jsonObject);
+		const res = await axios.post("/api/project/create", jsonObject);
 		console.log(res.data);
 	}
 });
