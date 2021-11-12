@@ -1,13 +1,17 @@
+<!--Acorn Nursery Find Project page Start-->
+<!--Code Authors: Andrew Burns, Collin Snyder-->
 <!DOCTYPE html>
 <html>
 
 <head>
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/find_project.css">
-    <title>Home</title>
+    <title>Find Project</title>
 </head>
 
 <body>
     <div class="background">
+        <!--Navigation Bar Start-->
         <div class="topnav">
             <div class="logo"><img src="Images/acorn.png" alt="Acorn Logo" width="40" height="40">
                 <p class="push">Acorn Nursery</p>
@@ -17,12 +21,13 @@
             <a class="active" href="find_project.html">Find Project</a>
             <a href="about_us.html">Sign Out</a>
         </div>
+        <!--Navigation Bar End-->
     </div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-
+<!--Page Details Start-->
 <div class="main_container">
     <table class="table table-test table-striped">
         <tr class="bg-info">
@@ -36,7 +41,7 @@
         </tbody>
     </table>
 </div>
-
+<!--Page Details End-->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     var myArray = [{
@@ -113,13 +118,13 @@
         },
     ]
 
-const getProjects = async (e) => {
-    const res = await axios.get("/api/project/getall");
-    return res.data.results;
-};
-const projects = getProjects();
+    const getProjects = async (e) => {
+        const res = await axios.get("/api/project/getall");
+        return res.data.results;
+    };
+    const projects = getProjects();
 
-myArray = projects;
+    myArray = projects;
 
     buildTable(myArray)
 
@@ -169,29 +174,3 @@ myArray = projects;
             table.innerHTML += row
         }
     }
-
-</script>
-
-    //         table.innerHTML += details
-
-    //         $('#toggle_width0').on('click', function () {
-    //             $('#0').toggle();
-    //         });
-
-    //         $('#toggle_width1').on('click', function () {
-    //             $('#1').toggle();
-    //         });
-    //     }
-    // }
-
-    // $(document).ready(function () {
-    //     $('#toggle_width0').on('click', function () {
-    //         $('#0').toggle();
-    //     });
-
-    //     $('#toggle_width1').on('click', function () {
-    //         $('#1').toggle();
-    //     });
-    // });
-</script>
-
