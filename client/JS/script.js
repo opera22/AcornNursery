@@ -79,7 +79,7 @@ form.addEventListener("submit", async (e) => {
 		jsonObject["features"] = features;
 		// console.log(jsonObject);
 
-		const res = await axios.post("/api/user/register", jsonObject);
+		const res = await axios.post("/api/project/create", jsonObject);
 		console.log(res.data);
 	}
 });
@@ -115,7 +115,6 @@ function checkInputs() {
 		setSuccessFor(description_feature);
 	}
 
-<<<<<<< Updated upstream
 	return allGood;
 }
 
@@ -130,8 +129,3 @@ function setSuccessFor(input) {
 	const formControl = input.parentElement;
 	formControl.className = "form-control success";
 }
-=======
-	const res = await axios.post("/api/projects/getall", jsonObject);
-	console.log(res.data);
-});
->>>>>>> Stashed changes
