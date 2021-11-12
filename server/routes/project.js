@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { response } = require('express');
 const db = require('../db');
 
 router.post('/create', (req, res) => {
@@ -34,17 +35,38 @@ router.post('/create', (req, res) => {
     res.status(201).send(`Successfully created project ${req.body.Title}`);
 });
 
-router.post('/getall?:id', (req, res) => {
+router.get('/getall?:id', (req, res) => {
+
+    let responseRows = [];
+
     console.log(req.body);
-    // db.query('select * from test_table', (err, rows) => {
-    //     if(err) console.log(err);
-    //     console.log(rows);
-    //     res.json({
-    //         title: rows[0].id,
-    //         description: rows[0].name
-    //     });
-    // });
-    res.send("hi");
+    db.query('select * from projects', (err, rows) => {
+
+        if (err) {
+            console.log(err);
+            return;
+        }
+        // console.log(rows);
+
+        rows.forEach(row => {
+            responseRows.push({
+                "title": row.PROJECT_TITLE,
+                "description": row.PROJECT_DESC,
+                "date": row.PROJECT_CREATED_DATE,
+                "category": "Unknown"
+            });
+            console.log(responseRows.length);
+        });
+
+        res.send(responseRows); 
+    });
+    // res.send([{
+    //     "title": "my title!",
+    //     "description": "desc",
+    //     "date": "jan 7",
+    //     "category": "web???"
+    // }]);
+    // console.log(responseRows);
 });
 
 module.exports = router;

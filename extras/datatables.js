@@ -20,24 +20,26 @@ function format(d) {
 $(document).ready(function () {
     var table = $('#example').DataTable({
         'ajax': {'url': 'http://localhost:3000/api/project/getall',
-                 'type': 'POST'},
+                 'type': 'GET',
+                 'dataSrc': ''
+                },
         'columns': [{
                 'className': 'details-control',
                 'orderable': false,
                 'data': null,
-                'defaultContent': '',
+                'defaultContent': ''
             },
             {
-                'data': 'name'
+                data: 'title'
             },
             {
-                'data': 'position'
+                data: 'description'
             },
             {
-                'data': 'office'
+                data : 'date'
             },
             {
-                'data': 'salary'
+                data: 'category'
             }
         ],
         'order': [
