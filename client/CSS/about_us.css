@@ -11,8 +11,14 @@
     margin-left: 20%;
     margin-right: 20%;
     border-radius: 3px;
+    font-weight: normal;
+    font-size: 25px;
 }
 
 .style {
     color: #6B9D41;
+}
+
+a:hover {
+    text-decoration: underline;
 }
