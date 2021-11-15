@@ -1,12 +1,16 @@
+<!--Acorn Nursery Login/Sign Up page Start-->
+<!--Code Authors: Andrew Burns, Collin Snyder-->
 <!DOCTYPE html>
 <html>
 
 <head>
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <title>Home</title>
+    <title>Login / Sign Up</title>
 </head>
 
 <body>
+    <!--Navigation Bar Start-->
     <div class="topnav">
         <div class="logo"><img src="Images/acorn.png" alt="Acorn Logo" width="40" height="40">
             <p class="push">Acorn Nursery</p>
@@ -14,15 +18,16 @@
         <a class="active" href="about_us.html">Home</a>
         <a href="home_logged_in.html">Log In</a>
     </div>
-    <!-- sign in portion -->
+    <!--Navigation Bar End-->
+    <!--Page Details Start-->
     <div class="main_container">
         <div class="margin">
-            <p class="size">"The seeds we’re planting today will grow and become mighty oaks and their branches will run all
-                over
-                the
-                earth." - Jacob Spori</p>
+            <p class="size">"The seeds we’re planting today will grow and become mighty oaks and their branches will run
+                all over the earth." - Jacob Spori</p>
         </div>
+
         <div class="container" id="container">
+            <!-- Sign Up Start-->
             <div class="form-container sign-up-container">
                 <form id="form">
                     <h1 style="color: black;">Create Account</h1>
@@ -52,7 +57,6 @@
                         <small>Error message</small>
                     </div>
 
-
                     <div class="form-control">
                         <input type="password" id="password2" placeholder="Confirm Password" />
                         <small>Error message</small>
@@ -61,8 +65,9 @@
                     <button type="submit">Sign Up</button>
                 </form>
             </div>
+            <!-- Sign Up End-->
+            <!-- Sign In Start-->
             <div class="form-container sign-in-container">
-                <!-- <form action="#"> -->
                 <form id="SecondForm">
                     <h1 style="color: black;">Sign in</h1>
 
@@ -79,7 +84,8 @@
                     <button type="submit" class="button" href="home_logged_in.html">Sign In</button>
                 </form>
             </div>
-            <!-- sign up portion -->
+            <!-- Sign In End-->
+            <!-- Overlay Start -->
             <div class="overlay-container">
                 <div class="overlay">
                     <div class="overlay-panel overlay-left">
@@ -88,15 +94,16 @@
                         <button class="ghost" id="signIn">Sign In</button>
                     </div>
                     <div class="overlay-panel overlay-right">
-                        <!--          <h1>Hello, Friend!</h1>-->
                         <h1>Welcome!</h1>
                         <p>Enter your personal details and start developing</p>
                         <button class="ghost" id="signUp">Sign Up</button>
                     </div>
                 </div>
             </div>
+            <!-- Overlay End-->
         </div>
     </div>
+    <!--Page Details End-->
 
 
     <script src="JS/login.js"></script>
