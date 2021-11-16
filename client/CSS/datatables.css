@@ -7,14 +7,6 @@ tr.shown td.details-control {
     background: url('https://cdn.rawgit.com/DataTables/DataTables/6c7ada53ebc228ea9bc28b1b216e793b1825d188/examples/resources/details_close.png') no-repeat center center;
 }
 
-body {
-    background-image: linear-gradient(rgba(105, 102, 102, 0.5), rgba(189, 107, 107, 0.5)), url("/client/Images/background_image.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    margin: 0 auto;
-}
-
 .dataTables_wrapper {
     background-color: white;
     padding: 5px;
@@ -26,48 +18,9 @@ body {
     padding-top: 5px;
 }
 
-.topnav {
-    background-color: #006EB6;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-}
-
-.topnav a {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    flex-wrap: wrap;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #F59B42;
-    color: white;
-}
-
-.push {
+div.container {
+    margin-left: auto;
     margin-right: auto;
-    margin-left: 10px;
-    font-weight: bold;
-    color: white;
-    height: 20px;
-    margin-top: 10px;
-}
-
-.logo {
-    margin-right: auto;
-    margin-left: 50px;
-    font-weight: bold;
-    color: white;
-    margin-top: 5px;
-    display: flex;
+    width: 80%;
+    margin-top: 40px;
 }

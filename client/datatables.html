@@ -1,10 +1,12 @@
 <!--resource: https://www.gyrocode.com/articles/jquery-datatables-how-to-expand-collapse-all-child-rows/-->
 <!DOCTYPE html>
 <html>
+
 <head>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.js"></script>
 
     <!-- <link rel="stylesheet" type="text/css" href="/css/result-light.css"> -->
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="css/datatables.css">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css">
@@ -12,32 +14,37 @@
 
     <script id="insert"></script>
 </head>
+
 <body>
     <div class="topnav">
-        <div class="logo"><img src="/client/Images/acorn.png" alt="Acorn Logo" width="40" height="40">
+        <div class="logo"><img src="Images/acorn.png" alt="Acorn Logo" width="40" height="40">
             <p class="push">Acorn Nursery</p>
         </div>
-        <a class="active" href="about_us.html">Home</a>
-        <a href="home_logged_in.html">Log In</a>
+        <a href="home_logged_in.html">Home</a>
+        <a href="sponsor_page.html">Sponsor Project</a>
+        <a class="active" href="datatables.html">Find Project</a>
+        <a href="about_us.html">Sign Out</a>
     </div>
-    <div class="expand_rows">
+    <!-- <div class="expand_rows">
     <button id="btn-show-all-children" type="button">Expand All</button>
     <button id="btn-hide-all-children" type="button">Collapse All</button>
-    </div>
-    
-    <table id="example" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Project Title</th>
-                <th>Description</th>
-                <th>Date</th>
-                <th>Catagory</th>
-            </tr>
-        </thead>
-    </table>
+    </div> -->
 
+    <div class="container">
+        <table id="example" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Project Title</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Catagory</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
     <script src="js/datatables.js"></script>
 
 </body>
+
 </html>
