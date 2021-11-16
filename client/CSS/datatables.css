@@ -10,6 +10,7 @@ tr.shown td.details-control {
 .dataTables_wrapper {
     background-color: white;
     padding: 5px;
+
 }
 
 .expand_rows {
@@ -18,9 +19,14 @@ tr.shown td.details-control {
     padding-top: 5px;
 }
 
-div.container {
+.container {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    margin-top: 40px;
+    margin-top: 5%;
+    width: 65%;
+}
+
+.main_container{
+    height: 94vh;
 }

@@ -86,7 +86,7 @@ input:checked + .slider:before {
   border-radius: 5px;
   padding-top: 30px;
   padding-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 7.8%;
 }
 
 input[type="text"]{

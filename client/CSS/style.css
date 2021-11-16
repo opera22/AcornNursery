@@ -96,7 +96,7 @@ a:link {
   text-decoration: none;
 }
 
-th {
+.header_color {
   cursor: pointer;
   color: #fff;
   background-color: #006EB6;
