@@ -64,7 +64,7 @@ router.get('/getall?:id', (req, res) => {
                 "description": row.PROJECT_DESC,
                 "date": row.PROJECT_CREATED_DATE,
                 "category": "Unknown",
-                "features": []
+                "features": [{"test": "hi"}]
             });
         });
 
