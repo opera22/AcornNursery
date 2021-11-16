@@ -48,6 +48,7 @@ router.post('/create', (req, res) => {
 router.get('/getall?:id', (req, res) => {
 
     let responseRows = [];
+    let features_list = [];
 
     console.log(req.body);
     db.query('select * from projects', (err, rows) => {
