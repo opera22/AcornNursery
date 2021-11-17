@@ -32,7 +32,7 @@ add_more_features.onclick = function () {
 	newFeature.size = 50;
 	newFeature.cols = 50;
 	newFeature.rows = 5;
-	newFeature.placeholder = "Feature Description";
+	newFeature.placeholder = "  Feature Description";
 	survey_fields.appendChild(newFeature);
 
 	feature_items.push([newTitle.id, newFeature.id]);

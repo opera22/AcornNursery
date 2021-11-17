@@ -114,7 +114,8 @@ textarea {
   margin: 15px auto;
   text-align: center;
   padding: 5px;
-  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+  /* font-family: 'JetBrains Mono', monospace; */
 }
 
 .controls_button a i.fa-minus {
@@ -194,4 +195,8 @@ table {
 .spacing_support {
   margin-bottom: 50px;
   margin-top: 10px;
+}
+
+::placeholder{
+  font-family: Avenir Next, sans-serif;
 }

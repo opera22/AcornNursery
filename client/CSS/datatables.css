@@ -22,11 +22,44 @@ tr.shown td.details-control {
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-    margin-top: 5%;
     width: 65%;
+    margin-top: 5%;
+
 }
 
 .main_container{
     height: 94vh;
+}
+
+.first_box {
+    margin-top: 81%;
+    width: 120px;
+    height: 50px;
+    background-color: green;
+    margin-bottom: 11px;
+    vertical-align: middle;
+}
+
+.boxes {
+    width: 120px;
+    height: 50px;
+    background-color: green;
+    margin-bottom: 11px;
+    vertical-align: middle;
+}
+
+.centerX{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    width: 1000px;
+}
+
+footer {
+    padding: 15px;
+    width: 100%;
+    background-color: rgb(82, 79, 79);
+    position: fixed;
+    bottom: 0;
+    text-align: center;
 }
