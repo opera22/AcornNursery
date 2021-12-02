@@ -50,7 +50,6 @@ router.get('/getall?:id', (req, res) => {
     let responseRows = [];
     let features_list = [];
 
-    console.log(req.body);
     db.query('select * from projects', (err, rows) => {
 
         if (err) {
@@ -60,12 +59,25 @@ router.get('/getall?:id', (req, res) => {
         // console.log(rows);
 
         rows.forEach(row => {
+
+            // Empty the features list (it will be different for each project/row)
+            features_list = [];
+
+            db.query('select * from features where project_id = ?', [row.PROJECT_ID], (err, res) => {
+                if (err) {
+                    console.log(err);
+                    return;
+                }
+                features_list.push(...res);
+                console.log(res);
+            });
+            
             responseRows.push({
                 "title": row.PROJECT_TITLE,
                 "description": row.PROJECT_DESC,
                 "date": row.PROJECT_CREATED_DATE,
-                "category": "Unknown",
-                "features": [{"test": "hi"}]
+                "category": row.CATEGORY,
+                "features": features_list
             });
         });
 
