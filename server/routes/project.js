@@ -2,6 +2,13 @@ const router = require('express').Router();
 const { response } = require('express');
 const db = require('../db');
 
+function sleep(ms) {
+    var start = new Date().getTime(),
+      expire = start + ms;
+    while (new Date().getTime() < expire) {}
+    return;
+  }
+
 router.post('/create', (req, res) => {
 
     let project_id = null;
@@ -45,10 +52,9 @@ router.post('/create', (req, res) => {
     res.status(201).send(`Successfully created project ${req.body.Title}`);
 });
 
-router.get('/getall?:id', (req, res) => {
+var responseRows = [];
+router.get('/getall', (req, res) => {
 
-    let responseRows = [];
-    let features_list = [];
 
     db.query('select * from projects', (err, rows) => {
 
@@ -68,20 +74,28 @@ router.get('/getall?:id', (req, res) => {
                     console.log(err);
                     return;
                 }
-                features_list.push(...res);
-                console.log(res);
-            });
-            
-            responseRows.push({
-                "title": row.PROJECT_TITLE,
-                "description": row.PROJECT_DESC,
-                "date": row.PROJECT_CREATED_DATE,
-                "category": row.CATEGORY,
-                "features": features_list
-            });
+                // console.log("LOOK HERE", res);
+                features_list = res.map(item => {
+                    // console.log("LOOK HERE", item.FEATURE_NAME);
+                    return {"FEATURE_NAME": item.FEATURE_NAME, "FEATURE_DESC": item.FEATURE_DESC};
+                });
+
+                // console.log(res);
+                responseRows.push({
+                    "title": row.PROJECT_TITLE,
+                    "description": row.PROJECT_DESC,
+                    "date": row.PROJECT_CREATED_DATE,
+                    "category": row.CATEGORY,
+                    "features": features_list
+                });
+                console.log("LOOK HERE", responseRows);
+            });     
         });
 
+        sleep(2000);
+        console.log(responseRows);
         res.send(responseRows); 
+        
     });
     // res.send([{
     //     "title": "my title!",
@@ -91,5 +105,6 @@ router.get('/getall?:id', (req, res) => {
     // }]);
     // console.log(responseRows);
 });
+
 
 module.exports = router;
