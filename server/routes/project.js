@@ -69,13 +69,18 @@ router.get('/getall', (req, res) => {
             // Empty the features list (it will be different for each project/row)
             features_list = [];
 
-            db.query('select * from features where project_id = ?', [row.PROJECT_ID], (err, res) => {
+            db.query('select * from features where project_id = ? order by project_id desc', [row.PROJECT_ID], (err, res2) => {
                 if (err) {
                     console.log(err);
                     return;
                 }
+                // If the project ID is the placeholder row, return the response; the projects list is complete
+                if (row.PROJECT_ID === 0) {
+                    res.send(responseRows);
+                    return;
+                }
                 // console.log("LOOK HERE", res);
-                features_list = res.map(item => {
+                features_list = res2.map(item => {
                     // console.log("LOOK HERE", item.FEATURE_NAME);
                     return {"FEATURE_NAME": item.FEATURE_NAME, "FEATURE_DESC": item.FEATURE_DESC};
                 });
@@ -88,13 +93,14 @@ router.get('/getall', (req, res) => {
                     "category": row.CATEGORY,
                     "features": features_list
                 });
-                console.log("LOOK HERE", responseRows);
+
+                // console.log("LOOK HERE", responseRows);
             });     
         });
 
-        sleep(2000);
-        console.log(responseRows);
-        res.send(responseRows); 
+        // sleep(2000);
+        // console.log(responseRows);
+        // res.send(responseRows); 
         
     });
     // res.send([{

@@ -1,14 +1,21 @@
 /* Formatting function for row details - modify as you need */
 function format(d) {
 
-    // d.features.forEach(feature => {});
+    feature_html = '';
+    d.features.forEach(feature => {
+        feature_html += '<tr>' +
+        '<td>Feature:</td>' +
+        '<td>' + feature.FEATURE_NAME + '</td>' +
+        '<td>Description:</td>' +
+        '<td>' + feature.FEATURE_DESC + '</td>' +
+        '</tr>';
+    });
+
+    // console.log(feature_html);
 
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
-        '<tr>' +
-        '<td>Feature:</td>' +
-        '<td>' + d.features[0].test + '</td>' +
-        '</tr>' +
+        feature_html +
         '</table>';
 }
 
