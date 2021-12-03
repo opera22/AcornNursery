@@ -1,0 +1,114 @@
+<!--Acorn Nursery Login/Sign Up page Start-->
+<!--Code Authors: Andrew Burns, Collin Snyder-->
+<!--Styling Preferences Aid: Devon Rotunno-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Login / Sign Up</title>
+</head>
+
+<body>
+    <!--Navigation Bar Start-->
+    <div class="topnav">
+        <div class="logo"><img src="Images/acorn.png" alt="Acorn Logo" width="40" height="40">
+            <p class="push">Acorn Nursery</p>
+        </div>
+        <a href="about_us.html">Home</a>
+        <a class="active" href="home_logged_in.html">Log In</a>
+    </div>
+    <!--Navigation Bar End-->
+    <!--Page Details Start-->
+    <div class="main_container">
+        <div class="margin">
+            <p class="size">"The seeds we’re planting today will grow and become mighty oaks and their branches will run
+                all over the earth." - Jacob Spori</p>
+        </div>
+
+        <div class="container" id="container">
+            <!-- Sign Up Start-->
+            <div class="form-container sign-up-container">
+                <form id="form">
+                    <h1 style="color: black;">Create Account</h1>
+
+                    <div class="form-control">
+                        <input type="text" id="username" placeholder="Username" />
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="text" id="f_name" placeholder="First Name" />
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="text" id="l_name" placeholder="Last Name" />
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="email" id="email" placeholder="Email" />
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="password" id="password" placeholder="Password" />
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="password" id="password2" placeholder="Confirm Password" />
+                        <small>Error message</small>
+                    </div>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <!-- Sign Up End-->
+            <!-- Sign In Start-->
+            <div class="form-container sign-in-container">
+                <form id="SecondForm">
+                    <h1 style="color: black;">Sign in</h1>
+
+                    <div class="form-control">
+                        <input type="email" id="sign_email" placeholder="Email" />
+                        <small>Error message</small>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="password" id="sign_password" placeholder="Password" />
+                        <small>Error message</small>
+                    </div>
+                    <a class="space" href="#">Forgot your password?</a>
+                    <button type="submit" class="button" href="home_logged_in.html">Sign In</button>
+                </form>
+            </div>
+            <!-- Sign In End-->
+            <!-- Overlay Start -->
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Welcome!</h1>
+                        <p>Enter your personal details and start developing</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Overlay End-->
+        </div>
+    </div>
+    <!--Page Details End-->
+
+
+    <script src="JS/login.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

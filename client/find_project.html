@@ -1,0 +1,177 @@
+<!--Acorn Nursery Find Project page Start-->
+<!--Code Authors: Andrew Burns, Collin Snyder-->
+<!--Styling Preferences Aid: Devon Rotunno-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/find_project.css">
+    <title>Find Project</title>
+</head>
+
+<body>
+    <div class="background">
+        <!--Navigation Bar Start-->
+        <div class="topnav">
+            <div class="logo"><img src="Images/acorn.png" alt="Acorn Logo" width="40" height="40">
+                <p class="push">Acorn Nursery</p>
+            </div>
+            <a href="home_logged_in.html">Home</a>
+            <a href="sponsor_page.html">Sponsor Project</a>
+            <a class="active" href="find_project.html">Find Project</a>
+            <a href="about_us.html">Sign Out</a>
+        </div>
+        <!--Navigation Bar End-->
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--Page Details Start-->
+<div class="main_container">
+    <table class="table table-test table-striped">
+        <tr class="bg-info">
+            <th data-colname="title" data-order="desc">Title &#9650</th>
+            <th data-colname="description" data-order="desc">Description</th>
+            <th data-colname="date" data-order="desc">Date &#9650</th>
+            <th data-colname="catagory" data-order="desc">Catagory &#9650</th>
+            <th></th>
+        </tr>
+        <tbody id="myTable">
+        </tbody>
+    </table>
+</div>
+<!--Page Details End-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    var myArray = [{
+            'title': 'Android',
+            'description': 'story',
+            'date': '11/10/1989',
+            'catagory': 'Web'
+        },
+        {
+            'title': 'Acorn Nursery',
+            'description': 'story',
+            'date': '10/1/1989',
+            'catagory': 'Web'
+        },
+        {
+            'title': 'IBM',
+            'description': 'story',
+            'date': '10/14/1990',
+            'catagory': 'Mobile'
+        },
+        {
+            'title': 'Acorn currency',
+            'description': 'story',
+            'date': '11/29/1993',
+            'catagory': 'Mobile'
+        },
+        {
+            'title': 'To the top',
+            'description': 'story',
+            'date': '3/12/1991',
+            'catagory': 'OS'
+        },
+        {
+            'title': 'Side loader',
+            'description': 'story',
+            'date': '10/31/1995',
+            'catagory': 'Web'
+        },
+        {
+            'title': 'Side loader',
+            'description': 'story',
+            'date': '10/31/1995',
+            'catagory': 'OS'
+        },
+        {
+            'title': 'Side loader',
+            'description': 'story',
+            'date': '10/31/1995',
+            'catagory': 'OS'
+        },
+        {
+            'title': 'Side loader',
+            'description': 'story',
+            'date': '10/31/1995',
+            'catagory': 'OS'
+        },
+        {
+            'title': 'Side loader',
+            'description': 'story',
+            'date': '10/31/1995',
+            'catagory': 'OS'
+        },
+        {
+            'title': 'Side loader',
+            'description': 'story',
+            'date': '10/31/1995',
+            'catagory': 'OS'
+        },
+        {
+            'title': 'Side loader',
+            'description': 'story',
+            'date': '10/31/1995',
+            'catagory': 'OS'
+        },
+    ]
+
+    const getProjects = async (e) => {
+        const res = await axios.get("/api/project/getall");
+        return res.data.results;
+    };
+    const projects = getProjects();
+
+    myArray = projects;
+
+    buildTable(myArray)
+
+    $('th').on('click', function () {
+        var column = $(this).data('colname')
+        var order = $(this).data('order')
+        var text = $(this).html()
+        text = text.substring(0, text.length - 1);
+
+
+
+        if (order == 'desc') {
+            myArray = myArray.sort((a, b) => a[column] > b[column] ? 1 : -1)
+            $(this).data("order", "asc");
+            text += '&#9660'
+        } else {
+            myArray = myArray.sort((a, b) => a[column] < b[column] ? 1 : -1)
+            $(this).data("order", "desc");
+            text += '&#9650'
+        }
+
+        $(this).html(text)
+        buildTable(myArray)
+    })
+
+
+    function buildTable(data) {
+        var table = document.getElementById('myTable')
+        table.innerHTML = ''
+        for (var i = 0; i < data.length; i++) {
+            var coltitle = `title-${i}`
+            var coldescription = `description-${i}`
+            var coldate = `date-${i}`
+            var colcatagory = `catagory-${i}`
+
+            var row = `<tr>
+                        <td>${data[i].title}</td>
+                        <td>${data[i].description}</td>
+                        <td>${data[i].date}</td>
+                        <td>${data[i].catagory}</td>
+                        <td><button id="toggle_width${i}">See details</button></td>
+                   </tr>`
+            // var details = `<tr>
+            //                 <td id="${i}">${data[i].description}</td>
+            //               </tr>`
+
+            table.innerHTML += row
+        }
+    }

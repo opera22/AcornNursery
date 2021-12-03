@@ -1,0 +1,65 @@
+td.details-control {
+    background: url('https://cdn.rawgit.com/DataTables/DataTables/6c7ada53ebc228ea9bc28b1b216e793b1825d188/examples/resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+    background: url('https://cdn.rawgit.com/DataTables/DataTables/6c7ada53ebc228ea9bc28b1b216e793b1825d188/examples/resources/details_close.png') no-repeat center center;
+}
+
+.dataTables_wrapper {
+    background-color: white;
+    padding: 5px;
+
+}
+
+.expand_rows {
+    background-color: white;
+    margin-top: 50px;
+    padding-top: 5px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    margin-top: 5%;
+
+}
+
+.main_container{
+    height: 94vh;
+}
+
+.first_box {
+    margin-top: 81%;
+    width: 120px;
+    height: 50px;
+    background-color: green;
+    margin-bottom: 11px;
+    vertical-align: middle;
+}
+
+.boxes {
+    width: 120px;
+    height: 50px;
+    background-color: green;
+    margin-bottom: 11px;
+    vertical-align: middle;
+}
+
+.centerX{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    width: 1000px;
+}
+
+footer {
+    padding: 15px;
+    width: 100%;
+    background-color: rgb(82, 79, 79);
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}

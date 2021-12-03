@@ -1,40 +1,104 @@
+<!--Acorn Nursery Sponsor Project page Start-->
+<!--Code Authors: Andrew Burns, Collin Snyder-->
+<!--Styling Preferences Aid: Devon Rotunno-->
 <!DOCTYPE html>
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/form_style.css">
+    <title>Sponsor Project</title>
 </head>
 
 <body>
-
     <div class="background">
+        <!--Navigation Bar Start-->
         <div class="topnav">
-            <div class="logo"><img src="acorn.png" alt="Acorn Logo" width="40" height="40">
+            <div class="logo"><img src="Images/acorn.png" alt="Acorn Logo" width="40" height="40">
                 <p class="push">Acorn Nursery</p>
             </div>
-            <a href="/index.html">Home</a>
-            <a class="active" href="#sponsor">Sponsor Project</a>
-            <a href="#find">Find Project</a>
-            <a href="#logout">Sign Out</a>
+            <a href="home_logged_in.html">Home</a>
+            <a href="datatables.html">Find Project</a>
+            <a class="active" href="sponsor_page.html">Sponsor Project</a>
+            <a href="about_us.html">Sign Out</a>
         </div>
+        <!--Navigation Bar End-->
+        <!--Page Details Start-->
+        <div class="container">
+            <div>
+                <form class="dynamic_form" id="form">
+                    <h2>Create Project</h2>
+                    <div class="controls">
+                        <div class="pm_button">
+                            <table>
+                                <tr>
+                                    <td><label>Are You The PM? (No/Yes)</label>
+                                        <label id="PM" class="switch">
+                                            <input id="Pm" type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label></td>
 
-        <h1>Sponsor Your Project</h1>
-        <div>
-            <div id="sponsor_fields">
-                <input type="text" name="sponsor_input" class="sponsor_fields" size="50" placeholder="Project Title">
-                <input type="text" name="sponsor_input" class="sponsor_fields" size="50" placeholder="Project Description">
-                <input type="text" name="sponsor_input" class="sponsor_fields" size="50" placeholder="Feature Description">
+                                    <td><label for="catagory">Choose a Catagory:</label>
+                                        <select name="catagory" id="catagory">
+                                            <option value="web">Web</option>
+                                            <option value="mobile">Mobile</option>
+                                            <option value="os">OS</option>
+                                        </select></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="center_text">
+                        <table>
+                            <tr>
+                                <td class="form-control"><input id="project_title" type="text" name="sponsor_input"
+                                        class="sponsor_fields" size="50" placeholder="Project Title">
+                                    <small>Error message</small></td>
+                            </tr>
+                            <tr>
+                                <td class="form-control"><textarea id="project_des" name="sponsor_input"
+                                        placeholder="  Project Description" class="sponsor_fields" cols="50"
+                                        rows="10"></textarea>
+                                    <small>Error message</small></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h2>Features</h2>
+                        
+                        <div class="form-control">
+                            <input type="text" id="feature_titles" name="sponsor_input"
+                                class="sponsor_fields form-control" size="0" placeholder="Feature Title">
+                            <small>Error message</small>
+                        </div>
+
+                        <div class="form-control">
+                            <textarea id="feature_description" name="sponsor_input" placeholder="  Feature Description"
+                                class="sponsor_fields" cols="50" rows="10"></textarea>
+                            <small>Error message</small>
+                        </div>
+                    </div>
+
+                    <div class="controls_button">
+                        <a href="#" id="add_more_features">[+ Add Feature]</a>
+                        <a href="#" id="remove_features">[- Remove Field]</a>
+                    </div>
+
+                    <div id="features" name="features[feature]"></div>
+
+                    <div>
+                        <button class="button_submit" id="Submit" type="submit">Submit</button>
+                    </div>
             </div>
-            <div class="controls">
-                <a href="#" id="add_more_features"><i class="fa fa-plus"></i>Add Feature</a>
-                <a href="#" id="remove_features"><i class="fa fa-plus"></i>Remove</a>
-            </div>
+            </form>
         </div>
+        <!--Page Details End-->
+    </div>
 
+    <script src="JS/script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </body>
-
-<script src="script.js"></script>
 
 </html>

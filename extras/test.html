@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+    div{
+        height: 400px;
+        width: auto;
+        background-color: red;
+    }
+    h1{
+        height: 40px;
+        width: auto;
+        background-color: blue;
+    }
+    .blue{
+        color: blue;
+        font-style: italic;
+        font-size: 20px;
+        background-color: black;
+    }
+
+    .another{
+        color: green;
+        margin-top: 10px;
+        font-style: italic;
+        font-size: 20px;
+        background-color: black;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+
+        $(document).ready(function(){
+          $(".background_data").hide();
+            $(".desc").hover(function(){
+                $(".background_data").toggle();
+            })
+        });
+    </script>
+</head>
+<body>
+<h1 class="desc">This is the header</h1>
+<div class="background_data">This is the body</div>
+<div class="another">This is another</div>
+</body>
+</html>

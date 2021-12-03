@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <hr>
+    <input type="checkbox" id="check"  name="EmpName"> Employee Name
+    <input type="checkbox" id="check2" name="Country"> Country
+    <input type="checkbox" id="check3" name="email"> Email
+    <input type="checkbox" id="check4" name="Salary"> Salary
+    </hr> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th class="ok">Employee Name</th>
+            <th class="ok">Country</th>
+            <th class="email">Email</th>
+            <th class="Salary">Salary</th>
+        </tr>
+        <tbody id="myTable">
+            <!-- <tr>
+                <td id="EmpName">data</td>
+                <td id="EmpName1">data</td>
+                <td id="EmpName2">data</td>
+                <td id="EmpName3">data</td>
+            </tr>
+            <tr>
+                <td id="Country">data2</td>
+                <td id="Country1">data2</td>
+                <td id="Country2">data2</td>
+                <td id="Country3">data2</td>
+            </tr> -->
+        </tbody>
+    </table>
+    <button id="toggle">Click Me</button>
+
+    <script type="text/javascript">
+        const checkBox = document.getElementById("check");
+        var clickButton = document.getElementById("toggle");
+        count = 0;
+        // const checkBox2 = document.getElementById("check2");
+        // const checkBox3 = document.getElementById("check3");
+        // const checkBox4 = document.getElementById("check4");
+        const list = [];
+
+        var myArray = [{
+                'title': 'Android',
+                'description': 'story',
+                'date': '11/10/1989',
+                'catagory': 'Web'
+            },
+            {
+                'title': 'Acorn Nursery',
+                'description': 'story',
+                'date': '10/1/1989',
+                'catagory': 'Web'
+            },
+            {
+                'title': 'IBM',
+                'description': 'story',
+                'date': '10/14/1990',
+                'catagory': 'Mobile'
+            }
+        ]
+
+        buildTable(myArray);
+
+        function buildTable(data) {
+            var table = document.getElementById('myTable')
+            table.innerHTML = ''
+            for (var i = 0; i < data.length; i++) {
+                var row = `<tr>
+                        <td>${data[i].title}</td>
+                        <td>${data[i].description}</td>
+                        <td>${data[i].date}</td>
+                        <td>${data[i].catagory}</td>
+                   </tr>`
+                table.innerHTML += row
+
+                console.log(table);
+            }
+
+            clickButton.addEventListener('click', function () {
+                
+
+            });
+        }
+
+        // function checkData(data) {
+        //     if (count == 0) {
+        //         for (let i = 0; i < data.length; i++) {
+        //             list.push(data[i].title, data[i].description, data[i].date, data[i].catagory);
+        //         }
+        //     }
+        //     count += 1;
+        //     console.log(list);
+        //     console.log(count);
+
+        //     // if (checkBox.checked == true) {
+        //     for (let i = 0; i < list.length; i++) {
+        //         list[i].remove;
+        //     }
+        // }
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,800;1,800&display=swap');
+
+h2 {
+  font-family: Avenir Next, sans-serif;
+  color: black;
+  text-align: center;
+}
+
+.container {
+    display: flex;
+    height: 94vh;
+    width: auto;
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dynamic_form {
+  justify-content: center;
+  background-color: rgb(247, 237, 212);
+  box-shadow: 0px 6px 23px -2px #000000;
+  border-radius: 5px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  margin-top: 7.8%;
+}
+
+input[type="text"]{
+  padding: 10px;
+  margin: 0px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: white;
+  width: 274px;
+  color: black;
+}
+
+textarea {
+  margin: 0px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  background: white;
+  width: 290px;
+  color: black;
+}
+
+.controls {
+  margin: 15px auto;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  /* font-family: 'JetBrains Mono', monospace; */
+}
+
+.controls_button a i.fa-minus {
+  margin-right: 5px;
+}
+
+.controls_button {
+  font-family: 'JetBrains Mono', monospace;
+  padding: 5px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.center_text {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 30px 0;
+}
+
+.button_submit {
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.form-control input{
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+}
+
+.form-control textarea{
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.success textarea {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control.error textarea {
+  border-color: #e74c3c;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	visibility: hidden;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.spacing_support {
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+::placeholder{
+  font-family: Avenir Next, sans-serif;
+}

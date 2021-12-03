@@ -1,0 +1,31 @@
+.main_container {
+    display: flex;
+    width: auto;
+    height: 94vh;
+    justify-content: center;
+}
+
+.table-striped {
+    margin-top: 40px;
+    width: 80%;
+    height: auto;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0px 6px 23px -2px #000000;
+    border-radius: 3px;
+}
+
+tr, td, table {
+    height: 50px !important; 
+    table-layout: fixed;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table-test tr:nth-child(odd){
+    background-color: #dee2e6;
+}
+
+.toggle_width {
+    width: 90px;
+}

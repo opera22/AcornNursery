@@ -1,0 +1,29 @@
+/* Login Page CSS */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: black;
+	color: white;
+	font-family: Avenir Next, sans-serif;
+}
+
+ header {
+    background: #000000;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    margin: auto;
+    color: white;
+}
+
+header::after{
+    content: '';
+    display:table;
+    clear:both;
+}
